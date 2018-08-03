@@ -1,0 +1,326 @@
+page{
+	background: #f0f0f0;
+}
+.box{
+	width: 100%;
+	display: flex;
+	background: #fff;
+	border-bottom: 2rpx solid #ececec;
+}
+.search_box{
+	flex: 1;
+	margin: 0 20rpx;
+	height: 66rpx;
+	padding-top: 14rpx;
+	position: relative
+}
+.search_box input{
+	height: 52rpx;
+	background: #e9e8ee;
+	border-radius: 30rpx;
+	padding-left: 85rpx;
+	font-size: 24rpx;
+	color: #333;
+}
+.search_box image{
+	position: absolute;
+	width: 27rpx;
+	height: 27rpx;
+	top: 27rpx;
+	left: 40rpx;
+	z-index: 1;
+}
+.search_options{
+	display: flex;
+	height: 72rpx;
+	line-height: 72rpx;
+	background: #fff;
+	border-bottom: 2rpx solid #ececec;
+}
+.s_btn{
+	width: 86rpx;
+	height: 52rpx;
+	border-radius: 6rpx;
+	background: #f23030;
+	font-size: 28rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 52rpx;
+	margin: 14rpx 20rpx 0 0;
+}
+
+.coupon_list_item {
+    position: relative;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out,-webkit-transform .5s ease-in-out;
+}
+.coupon_voucher2 {
+    position: relative;
+    margin: 30rpx 20rpx;
+    border-radius: 12rpx;
+    color: #53c7ca;
+    border-top: 12rpx solid currentColor;
+    border-bottom: 20rpx solid #fff;
+}
+.coupon_voucher2::before {
+    content: "";
+    position: absolute;
+    top: 8rpx;
+    bottom: 8rpx;
+    left: 20rpx;
+    right: 20rpx;
+    box-shadow: 0 4rpx 20rpx 20rpx rgba(0,0,0,.1);
+    z-index: -1;
+}
+.coupon_voucher2_tag {
+    z-index: 1;
+    position: absolute;
+    left: -8rpx;
+    top: 10rpx;
+    background-color: #ff9574;
+    height: 28rpx;
+    line-height: 28rpx;
+    font-size: 20rpx;
+    color: #fff;
+    padding: 0 16rpx;
+    text-align: center;
+    border-radius: 20rpx 20rpx 20rpx 0;
+    background-image: -webkit-linear-gradient(left,#ff9574 20%,#e93b3d);
+    background-image: linear-gradient(left,#ff9574 20%,#e93b3d);
+    box-shadow: 4rpx 4rpx 10rpx rgba(233,59,61,.2);
+}
+.coupon_voucher2_tag::before {
+    content: "";
+    width: 8rpx;
+    height: 20rpx;
+    background-color: #ff9574;
+    position: absolute;
+    left: 0;
+    top: 14rpx;
+}
+.coupon_voucher2_tag::after {
+    content: "";
+    width: 8rpx;
+    height: 16rpx;
+    border-radius: 16rpx 0 0 16rpx;
+    background-color: #d02b2d;
+    position: absolute;
+    top: 28rpx;
+    left: 0;
+}
+.coupon_voucher2_tag text::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    margin-top: 1px;
+}
+.coupon_voucher2_main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    color: currentColor!important;
+    padding: 20rpx 20rpx 0;
+    min-height: 192rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.coupon_voucher2_view {
+    width: 240rpx;
+    text-align: center;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-right: 20rpx;
+}
+.coupon_voucher2_view_price {
+    line-height: 1;
+}
+.coupon_voucher2_view_price i {
+    font-size: 28rpx;
+    display: inline-block;
+    vertical-align: top;
+    margin: 12rpx 8rpx 0 0;
+}
+.coupon_voucher2_view_price strong {
+    font-family: font_steelfish;
+    font-weight: 700;
+    font-size: 90rpx;
+    position: relative;
+    top: 2rpx;
+}
+.coupon_voucher2_view_des {
+    font-size: 28rpx;
+    margin-top: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.coupon_voucher2_view_des ~ p {
+    margin-top: -4rpx;
+}
+.coupon_voucher2_info {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    padding-bottom: 30rpx;
+}
+.coupon_voucher2_info_text {
+    font-size: 24rpx;
+    color: #666;
+    max-height: 64rpx;
+    line-height: 32rpx;
+		margin-top: 60rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 26rpx;
+}
+.coupon_voucher2_info_type {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4rpx;
+    margin-right: 8rpx;
+    padding: 0 12rpx 0 24rpx;
+    -webkit-mask-box-image-source: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAeBAMAAABnKKUQAAAABGdBT…4K57NnM7kZcp24dEiQuE48I0r8dYsfk6TikhRWDSRjaQIDkrCy+FPWEgAAAABJRU5ErkJggg==);
+    mask-border-source: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAeBAMAAABnKKUQAAAABGdBT…4K57NnM7kZcp24dEiQuE48I0r8dYsfk6TikhRWDSRjaQIDkrCy+FPWEgAAAABJRU5ErkJggg==);
+    -webkit-mask-box-image-slice: 10 20 20 20 fill;
+    mask-border-slice: 10 20 20 20 fill;
+    color: #fff;
+    font-size: 20rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    border-radius: 0 4rpx 4rpx 0;
+    background-color: #53c7ca;
+}
+.coupon_voucher2_info_type::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    margin-top: 4rpx;
+}
+.coupon_voucher2_info_label {
+    font-size: 0;
+}
+.coupon_voucher2_info_label span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 34rpx;
+    line-height: 34rpx;
+    font-size: 24rpx;
+    color: #999;
+    background-color: #f8f8f8;
+    border-radius: 4rpx;
+    margin: -4rpx 10rpx 10rpx 0;
+    padding: 0 10rpx;
+}
+.coupon_voucher2_info_date {
+    line-height: 1;
+    font-size: 20rpx;
+    color: #999;
+}
+.coupon_voucher2_hr {
+    position: relative;
+    height: 36rpx;
+    -webkit-mask-box-image-source: url(http://www.zhue.cn/mobile/themes/zhue/images/applet/coupon_foot.png);
+    mask-border-source: url(http://www.zhue.cn/mobile/themes/zhue/images/applet/coupon_foot.png);
+    -webkit-mask-box-image-slice: 12 fill;
+    mask-border-slice: 12 fill;
+    -webkit-mask-box-image-width: 12rpx;
+    mask-border-width: 12rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.coupon_voucher2_hr::before {
+    content: "";
+    display: block;
+    border-top: 2rpx dashed #e5e5e5;
+    position: absolute;
+    left: 20rpx;
+    right: 20rpx;
+    top: 18rpx;
+}
+.coupon_voucher2_btns {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    background-color: #fff;
+}
+.coupon_voucher2_btns_item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    height: 32rpx;
+    line-height: 32rpx;
+    font-size: 28rpx;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.coupon_voucher2_btns_item.color_red {
+    color: #e93b3d;
+}
+.coupon_voucher2_view_priceSymbol{
+	font-size: 28rpx;
+	display: inline-block;
+	vertical-align: top;
+	margin: 12rpx 8rpx 0 0;
+}
+.coupon_voucher2_view_priceVal {
+    font-family: font_steelfish;
+    font-weight: 700;
+    font-size: 45px;
+    position: relative;
+    top: 1px;
+}
+.bonus_nav{
+	width: 100%;
+	height: 80rpx;
+	background: #fff;
+	display: flex;
+	line-height: 80rpx;
+}
+.bonus_nav view{
+	flex: 1;
+	text-align: center;
+}
+.bonus_nav text{
+	font-size: 28rpx;
+	color: #666666;
+}
+.bonus_nav text.bouns_checked{
+	display: inline-block;
+	color: #f23031;
+	border-bottom: 4rpx solid #f23031;
+	height: 76rpx;
+}
+.type_disabled .coupon_voucher2_info_text{
+	margin-top: 50rpx;
+}
+.coupon_voucher2_already{
+	background: #fff url(http://www.zhue.cn/mobile/themes/zhue/images/applet/already_has.png) no-repeat;
+	background-size: 118rpx 115rpx;
+	background-position: right top;
+}

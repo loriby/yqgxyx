@@ -1,0 +1,90 @@
+page{
+	background: #f0f0f0;
+}
+.goods_comments{
+  width: 100%;
+  background: #fff;
+}
+.gcom_tit{
+  height: 96rpx;
+  padding: 0 20rpx;
+  margin-top: 10rpx;
+  border-bottom: 2rpx solid #f0f0f0;
+}
+.gct_left{
+  float: left;
+  font-size: 28rpx;
+  color: #2d2d2d;
+  line-height: 96rpx;
+}
+.gct_right{
+  float: right;
+  font-size: 28rpx;
+  color: #292929;
+  line-height: 96rpx;
+}
+.gct_right text{
+  color: #ff1822;
+}
+.gcom_list{
+  padding: 0 20rpx 20rpx;
+  border-bottom: 2rpx solid #f1f1f1;
+}
+.cl_msg{
+  display: flex;
+  margin-top: 28rpx;
+}
+.clm_img{
+  width: 146rpx;
+  height: 24rpx;
+}
+.clm_name{
+  flex: 1;
+  text-align: right;
+  color: #919191;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+}
+.clm_time{
+  width: 240rpx;
+  font-size: 24rpx;
+  color: #919191;
+}
+.cl_cont{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+  color: #343434;
+  height: 80rpx;
+  overflow: hidden;
+}
+.cl_imgs{
+  width: 100%;
+}
+.cli_img{
+  width: 150rpx;
+  height: 134rpx;
+  border: 2rpx solid #f2f2f2;
+  float: left;
+  margin: 20rpx 20rpx 0 0;
+}
+.cli_img image{
+  height: 100%;
+  width: auto;
+}
+.cl_revet{
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #fa4200;
+  margin-top: 40rpx;
+}
+.cl_add_tit{
+  color: #f03530;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.cl_add_cont{
+  color: #2f2f2f;
+  font-size: 28rpx;
+  margin-top: 12rpx;
+}

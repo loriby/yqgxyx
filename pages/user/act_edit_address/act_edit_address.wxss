@@ -1,0 +1,71 @@
+/* pages/user/act_edit_address/act_edit_address.wxss */
+page{
+	background: #f0f0f0;
+}
+.aea_list{
+	padding: 0 20rpx;
+	border-top: 2rpx solid #e8e8e8;
+	background: #fff;
+	height: 100rpx;
+	line-height: 100rpx;
+	display: flex;
+}
+.aeal_txt{
+	font-size: 32rpx;
+	color: #333333;
+	width: 170rpx;
+}
+.aeal_box{
+	flex: 1;
+}
+.aeal_box input{
+	width: 100%;
+	height: 100rpx;
+	font-size: 28rpx;
+	color: #343434;
+}
+.aeal_box picker{
+	width: 100%;
+	height: 100rpx;
+	font-size: 28rpx;
+	color: #3985fd;
+}
+.aeal_txtg{
+	color: #999999;
+}.ods_wxzf{
+	width: 100%;
+	height: 88rpx;
+	background: #1aac19;
+	color:#fff;
+	font-size: 36rpx;
+	text-align: center;
+	line-height: 88rpx;
+	border-radius: 10rpx;
+	margin-top: 30rpx;
+}
+.ods_qrsh{
+	width: 100%;
+	height: 88rpx;
+	background: #f23030;
+	color:#fff;
+	font-size: 36rpx;
+	text-align: center;
+	line-height: 88rpx;
+	border-radius: 10rpx;
+	margin-top: 30rpx;
+}
+.ods_ddgz{
+	width: 100%;
+	height: 88rpx;
+	background: #f8f8f8;
+	color:#333;
+	font-size: 36rpx;
+	text-align: center;
+	line-height: 88rpx;
+	border-radius: 10rpx;
+	margin-top: 30rpx;
+	border: 2rpx solid #c6c6c6;
+}
+.aea_wrap{
+	margin: 0 20rpx;
+}

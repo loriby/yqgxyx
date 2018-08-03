@@ -1,0 +1,60 @@
+<view class='box'>
+	<view class='search_box'>
+		<input placeholder='请输入商品名称' bindinput='search_goods' value='{{search_values}}'></input>
+		<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/search.png'></image>
+	</view>
+	<view class='s_btn' bindtap='sub_search'>搜索</view>
+</view>
+
+<view class="coupon_list_item">
+	<view class="coupon_voucher2 ">
+		<text class="coupon_voucher2_tag">
+			<text>新人专享</text>
+		</text>
+		<navigator class="coupon_voucher2_main">
+			<view class="coupon_voucher2_view">
+				<view class="coupon_voucher2_view_price">
+					<text class='coupon_voucher2_view_priceSymbol'>¥</text>
+					<text class='coupon_voucher2_view_priceVal'>68</text>
+				</view>
+				<view class="coupon_voucher2_view_des">满128元可用</view>
+				<view class="coupon_voucher2_view_tips" style="display: none;">false</view>
+			</view>
+			<view class="coupon_voucher2_info">
+				<view class="coupon_voucher2_info_text">
+					仅可购买自营指定商品
+				</view>
+				<view class="coupon_voucher2_info_date">2018.06.01-2018.06.20</view>
+			</view>
+		</navigator>
+		<view class="coupon_voucher2_foot">
+			<view>
+				<view class="coupon_voucher2_hr"></view>
+				<view class="coupon_voucher2_btns">
+					<navigator href="https://so.m.jd.com/list/couponSearch.action?couponbatch=72509122&amp;coupon_shopid=0" ptag="7211.4.13" class="coupon_voucher2_btns_item color_red">去使用</navigator>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- <text class="coupon_list_delete">删除</text> -->
+</view>
+<view class="coupon_list_item">
+	<view class="coupon_voucher2 ">
+		<navigator class="coupon_voucher2_main coupon_voucher2_already">
+			<view class="coupon_voucher2_view">
+				<view class="coupon_voucher2_view_price">
+					<text class='coupon_voucher2_view_priceSymbol'>¥</text>
+					<text class='coupon_voucher2_view_priceVal'>68</text>
+				</view>
+				<view class="coupon_voucher2_view_des">满128元可用</view>
+				<view class="coupon_voucher2_view_tips" style="display: none;">false</view>
+			</view>
+			<view class="coupon_voucher2_info type_disabled">
+				<view class="coupon_voucher2_info_text">
+					仅可购买自营指定商品
+				</view>
+				<view class="coupon_voucher2_info_date">2018.06.01-2018.06.20</view>
+			</view>
+		</navigator>
+	</view>
+</view>

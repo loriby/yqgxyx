@@ -1,0 +1,36 @@
+<view class="container">
+	<view class='cr_list'>
+		<text class="cr_txt">售后类型</text>
+		<view class='cr_sele'>
+			<picker>请选择</picker>
+		</view>
+	</view>
+	<view class='cr_list1'>
+		<text class="cr_txt">售后类型</text>
+		<view class='cr_text'>
+			<textarea></textarea>
+		</view>
+	</view>
+	<view class='cr_list'>
+		<text class="cr_txt">售后类型</text>
+		<view class='cr_des'>请您上传与商家沟通d额记录图片,或破包、损害照片,每张图片大小不超过4M</view>
+	</view>
+	<view class='cr_imgs'>
+		<view class='sele_img'></view>
+	</view>
+	<view class='cr_list'>
+		<text class="cr_txt">售后类型</text>
+		<view class='cr_ipt'>
+			<input type='text'/>
+		</view>
+	</view>
+	<view class='cr_list'>
+		<text class="cr_txt">售后类型</text>
+		<view class='cr_ipt'>
+			<input type='text'/>
+		</view>
+	</view>
+	<view class='cr_btn'>
+		<button>提交售后</button>
+	</view>
+</view>

@@ -1,0 +1,101 @@
+page{
+	background: #f8f8f8;
+	width: 100%;
+	height: 100%;
+}
+.container{
+	height: 100%;
+}
+.search_wrap{
+	height: 40px;
+	background: #fff;
+	padding-top: 17rpx;
+	width: 100%;
+	z-index: 9;
+	border-bottom: 2rpx solid #dddddd;
+}
+.idx_search {
+	height:60rpx;
+	margin:0 20rpx;
+	border-radius:39rpx;
+	background:#f7f7f7;
+	text-align:center;
+}
+.idx_search text {
+	font-size:28rpx;
+	line-height:60rpx;
+	color:#999;
+	margin-left:16rpx;
+	position:relative;
+	display:inline-block;
+	background:url(http://www.zhue.cn/mobile/themes/zhue/images/applet/idx_search.png) no-repeat;
+	background-size:28rpx 28rpx;
+	background-position:left center;
+	padding-left:34rpx;
+}
+.cat_wrap{
+	display: flex;
+}
+.cat_list{
+	width: 156rpx;
+}
+.cat_detail{
+	flex: 1;
+	background: #fff;
+}
+.cat_list text{
+	display: block;
+	text-align: center;
+	height: 88rpx;
+	line-height: 88rpx;
+	font-size: 24rpx;
+	color: #333333;
+}
+.cat_list text.list_checked{
+	background: #fff;
+	color: #e72a2c;
+}
+.detail_tit{
+	font-size: 24rpx;
+	margin: 20rpx 0 0 20rpx;
+	color: #333;
+}
+.detail_goods{
+	width: 100%;
+	margin-top: 26rpx;
+}
+.dg_list{
+	width: 33.33%;
+	float: left;
+}
+.dg_list image{
+	width: 140rpx;
+	height: 140rpx;
+	display: block;
+	margin: 0 auto;
+}
+.dg_list text{
+	font-size: 24rpx;
+	color: #333;
+	margin: 12rpx 0 36rpx 0;
+	display: block;
+	text-align: center;
+}
+.detail_tab{
+	margin: 28rpx 36rpx 0;
+	border-top: 2rpx solid #dddddd;
+	border-left: 2rpx solid #dddddd;
+}
+.detail_tab text{
+	width: 33.33%;
+	display: block;
+	height: 60rpx;
+	text-align: center;
+	line-height: 60rpx;
+	float: left;
+	font-size: 24rpx;
+	color: #333;
+	border-right: 2rpx solid #ddd;
+	border-bottom: 2rpx solid #ddd;
+	box-sizing: border-box;
+}

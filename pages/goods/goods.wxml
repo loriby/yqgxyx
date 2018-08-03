@@ -1,0 +1,202 @@
+<view class="container">
+  <!-- 商品图轮播 -->
+  <swiper indicator-dots='true' circular="true" class="swip" indicator-active-color="#f23030">
+    <swiper-item>
+      <image src='{{goods.pic_url}}'></image>
+    </swiper-item>
+  </swiper>
+  <!-- 商品图轮播 END -->
+
+  <!-- 商品信息 -->
+  <view class='goods_msg'>
+    <view class='goods_name'>{{goods.title}}</view>
+    <view class='goods_instru'>{{goods.intro}}</view>
+    <view class='goods_price'>￥{{goods.coupon_price}} </view>
+		<!-- <text>促销</text>
+    <view class="goods_countdown">还剩 <text>{{countdown}}</text></view>
+    <view class='goods_prom'>
+      <text class="gp_tit">促销</text>
+      <view class='gp_msg'>
+        <view class='gpm_list'><text>满减</text>店铺满30000.00元,赠1件店铺满30000.00元,赠1件店铺满30000.00元,赠1件</view>
+      </view>
+    </view>
+    <view class="goods_coupon">
+      <view class='gc_tit'>
+        <text class='gc_titl'>领券</text>
+        <view class='gc_titr' bindtap='showCoupon'>
+          <text>共三张</text>
+          <image src='{{coupArrow}}' class='{{coupArrCla}}'></image>
+        </view>
+        <view class='clear'></view>
+      </view>
+      <view class='gc_wrap {{showCoup}}'>
+        <view class='gcw_list'>
+          <view class='wl_left'>
+            <view class='wll_top'>
+              <view class='wlt_price'>￥20.00</view>
+              <view class='wlt_require'>满500元可用</view>
+            </view>
+            <view class='wll_btm'>有效期06-15至12-31</view>
+          </view>
+          <view class='wl_right'>点击领取</view>
+        </view>
+        <view class='gcw_list'>
+          <view class='wl_left wll_g'>
+            <view class='wll_top'>
+              <view class='wlt_price'>￥20.00</view>
+              <view class='wlt_require'>满500元可用</view>
+            </view>
+            <view class='wll_btm'>有效期06-15至12-31</view>
+          </view>
+          <view class='wl_right wlr_g'>点击领取</view>
+        </view>
+        <view class='gcw_list'>
+          <view class='wl_left wll_g'>
+            <view class='wll_top'>
+              <view class='wlt_price'>￥20.00</view>
+              <view class='wlt_require'>满500元可用</view>
+            </view>
+            <view class='wll_btm'>有效期06-15至12-31</view>
+          </view>
+          <view class='wl_right wlr_g'>点击领取</view>
+        </view>
+        <text class='clear'></text>
+      </view>
+    </view>
+
+    <view class="goods_msg2">
+      <view>原价<text>￥14.00</text></view>
+      <view>月销<text>￥14.00</text></view>
+      <view>品牌<text>￥14.00</text></view>
+    </view>
+
+    <view class="goods_msg3">
+      <view>剂型<text>￥14.00</text></view>
+      <view>规格<text>￥14.00</text></view>
+      <view>承运<text>￥14.00</text></view>
+    </view> -->
+
+
+  </view>
+  <!-- 商品信息 END -->
+
+  <!-- 配送地址 -->
+  <!-- <view class='goods_address'>
+    <view class='ga_send'>
+      <text class='gas_txt'>送至</text>
+      <picker mode='region' class="gas_sele">
+        <view class='picker'>中国</view>
+      </picker>
+      <image class='gas_arrow' src='images/right-j.png'></image>
+    </view>
+    <view class='ga_send'>
+      <text class='gas_txt'>送至</text>
+      <text class='gas_freight'>1-199元之间15元; 单笔订单满200元免运费</text>
+    </view>
+    <view class='ga_payway'>
+      <image src='images/pay_way.png'></image>
+      <text>支付宝</text>
+      <image src='images/pay_way.png'></image>
+      <text>银联支付</text>
+      <image src='images/pay_way.png'></image>
+      <text>微信支付</text>
+      <image src='images/pay_way.png'></image>
+      <text>转账汇款</text>
+      <image src='images/pay_way.png'></image>
+      <text>正品保障 担保交易 假一赔十</text>
+      <view class='clear'></view>
+    </view>
+  </view> -->
+  <!-- 配送地址 END -->
+
+  <!-- 专家服务 -->
+  <!-- <navigator src=''>
+    <view class='exp_service'>
+      <image class='es_icon' src='images/exp_service.png'></image>
+      <text class='es_name'>专家服务</text>
+      <text class='es_describe'>该店铺提供免费用药指导、疾病诊断、饲养管理指导</text>
+      <text class='es_place'></text>
+      <image class='es_arrow' src='images/right-j.png'></image>
+    </view>
+  </navigator> -->
+  <!-- 专家服务 END -->
+
+  <!-- 进入店铺 -->
+  <!-- <view class='goods_shop'>
+    <image src='http://www.zhue.cn/data/suplogo/1496791937026632778.jpg' class='gs_logo'></image>
+    <view class='gs_msg'>
+      <view class='gsm_name'>新希望集团</view>
+      <view class='gsm_address'>四川</view>
+      <view class='gsm_count'>商品总数12</view>
+    </view>
+    <view class='gs_btn'>
+      <navigator url='../suppliers/suppliers'>
+        <image src='images/goods_shop.png'></image>
+        <text>进入店铺</text>
+      </navigator>
+    </view>
+  </view> -->
+  <!-- 进入店铺 END -->
+
+  <!-- 商品评价 -->
+  <!-- <view class='goods_comments'>
+    <view class='gcom_tit'>
+      <view class='gct_left'>评价</view>
+      <view class='gct_right'><text>12.34%</text>好评</view>
+      <text class='clear'></text>
+    </view>
+    <view class='gcom_list'>
+      <view class='cl_msg'>
+        <image class='clm_img' src='images/stars5.png'></image>
+        <view class='clm_name'>2*****</view>
+        <view class='clm_time'>2016-08-13 12:33:66</view>
+      </view>
+      <view class='cl_cont'>3月9号我买了本公司三种药品打虫药和扶正解毒散与12号和13号先后收到,阿莫西林至今不见,向客服反映了两次也不见回音,请问是什么情况.?</view>
+      <view class='cl_imgs'>
+        <view class='cli_img' bindtap='showImg'>
+          <image src="http://www.zhue.cn/images/201608/goods_img/1410_G_1470768154746.jpg"></image>
+        </view>
+        <view class='cli_img'>
+          <image src="http://www.zhue.cn/images/201608/goods_img/1410_G_1470768154746.jpg"></image>
+        </view>
+        <text class='clear'></text>
+      </view>
+      <view class='cl_revet'>卖家回复：<text>大恒科技闪电借款傻就傻</text></view>
+      <view class='cl_add_tit'>追加评论</view>
+      <view class='cl_add_cont'>大恒科技闪电借款傻就傻</view>
+    </view>
+  </view> -->
+  <!-- 商品评价 END -->
+
+  <!-- 商品图片 -->
+  
+  <!-- 商品图片 END -->
+
+  <!-- 商品介绍 -->
+  <!-- <view class='goods_detail'>
+    <view class='gd_tit'>
+      <view bindtap='tab' data-name='first' class="{{firstClass}}">商品介绍</view>
+      <view bindtap='tab' data-name='second' class="{{secondClass}}">规格参考</view>
+      <view bindtap='tab' data-name='third' class="{{thirdClass}}">售后保障</view>
+    </view>
+    <view class='gd_intro' wx-if="{{firstClass == 'checked'}}">1</view>
+    <view class='gd_speci' wx-if="{{secondClass == 'checked'}}">2</view>
+    <view class='gd_sales' wx-if="{{thirdClass == 'checked'}}">3</view>
+  </view> -->
+  <!-- 商品介绍 -->
+
+  <view class='goods_buy'>
+    <view class='gb_cart'>
+      <image src='../index/images/idx_index.png'></image>
+      <text>首页</text>
+    </view>
+    <view class='gb_cart'>
+      <image src='../../images/cate.png'></image>
+      <text>分类</text>
+    </view>
+    <view class='gb_add' bindtap='copy'>
+      立即购买
+    </view>
+  </view>
+
+</view>

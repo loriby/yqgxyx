@@ -1,0 +1,54 @@
+<view class='container'>
+
+  <!-- 个人信息 -->
+  <view class='mine_top'>
+    <view class='mt_wrap'>
+      <view class='mtw_l'>
+        <image class='mtw_prot' src='http://p.qq181.com/cms/1210/2012100413195471481.jpg'></image>
+        <view class="mtw_lev">
+          <image class='lev_img' src='images/level.png'></image>
+          <text class='lev_txt'>钻石会员</text>
+        </view>
+      </view>
+      <view class='mtw_r'>
+        <view class='mwr_name'>千秋2222</view>
+        <view class='mwr_id'>账号：1454564646456</view>
+      </view>
+    </view>
+  </view>
+  <!-- 个人信息 END -->
+  
+  <!-- 列表 -->
+  <view class='mine_btm'>
+    <navigator src=''>
+      <view class='mb_list'>
+        <image class='mbl_icon' src="images/order.png"></image>
+        <text class='mbl_txt'>全部订单</text>
+        <image class='mbl_arrow' src='../cart/images/price_right1.png'></image>
+      </view>
+    </navigator>
+    <navigator src=''>
+      <view class='mb_list'>
+        <image class='mbl_icon' src="images/wait.png"></image>
+        <text class='mbl_txt'>待付款</text>
+        <image class='mbl_arrow' src='../cart/images/price_right1.png'></image>
+      </view>
+    </navigator>
+    <navigator src=''>
+      <view class='mb_list'>
+        <image class='mbl_icon' src="images/goods.png"></image>
+        <text class='mbl_txt'>待收货 <text class='mbg_count'>2单</text></text>
+        <image class='mbl_arrow' src='../cart/images/price_right1.png'></image>
+      </view>
+    </navigator>
+    <navigator src=''>
+      <view class='mb_list'>
+        <image class='mbl_icon' src="images/after.png"></image>
+        <text class='mbl_txt'>售后订单</text>
+        <image class='mbl_arrow' src='../cart/images/price_right1.png'></image>
+      </view>
+    </navigator>
+  </view>
+  <!-- 列表 END -->
+
+</view>

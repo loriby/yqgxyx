@@ -1,0 +1,75 @@
+page{
+	background: #f0f0f0;
+}
+.al_list{
+	background: #fff;
+	margin-bottom: 20rpx;
+	border-top: 2rpx solid #f0f0f0;
+}
+.all_name{
+	padding: 0 20rpx;
+	margin-top: 40rpx;
+	font-size: 32rpx;
+	color: #333333;
+}
+.name{
+	float: left;
+}
+.phone{
+	float: left;
+	margin-left: 54rpx;
+}
+.al_address{
+	padding: 0 20rpx;
+	margin-top: 20rpx;
+	font-size: 28rpx;
+	color: #999999;
+}
+.al_oper{
+	padding: 0 20rpx;
+	border-top: 2rpx solid #f0f0f0;
+	margin-top: 20rpx;
+	height: 80rpx;
+}
+.alo_check{
+	width: 180rpx;
+	float: left;
+}
+.alo_check radio{
+	width: 30rpx;
+	height: 30rpx;
+	margin-top: 2rpx;
+	color: #f2434a;
+}
+.alo_check label{
+	font-size: 28rpx;
+	color: #999999;
+	margin-left: 20rpx;
+	line-height: 80rpx;
+}
+.alo_edit{
+	width: 120rpx;
+	float: right;
+	margin: 16rpx 0 0 50rpx;
+}
+.alo_edit image{
+	width: 30rpx;
+	height: 30rpx;
+	display: inline-block;
+	margin: 8rpx 8rpx 0 10rpx;
+	float: left;
+}
+.alo_edit text{
+	font-size: 28rpx;
+	color: #9a9a9a;
+}
+.al_add{
+	margin: 20rpx 20rpx 0;
+	height: 88rpx;
+	background: #f23030;
+	font-size: 36rpx;
+	border-radius: 10rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 88rpx;
+}

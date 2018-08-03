@@ -1,0 +1,26 @@
+page{
+	border-top: 1px solid #dddddd;
+	background: #f0f0f0;
+}
+.zx_content{
+	display: block;
+	width: 100%;
+	height: 126px;
+	color: #333;
+	font-size: 16px;
+	background: #fff;
+	border: none;
+	outline: none;
+	padding: 20rpx;
+	box-sizing: border-box;
+}
+.zx_sub{
+	margin: 20rpx 20rpx 0;
+	background: #f23030;
+	font-size: 28rpx;
+	color: #fff;
+	border-radius: 0;
+	height: 88rpx;
+	padding: 0;
+	line-height: 88rpx;
+}

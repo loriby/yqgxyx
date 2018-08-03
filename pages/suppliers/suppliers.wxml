@@ -1,0 +1,124 @@
+<view class='container'>
+	<view class='shop_msg'>
+		<image class='shop_bg' src='http://www.zhue.cn/mobile/themes/zhue/images/applet/shop_bgr.jpg'></image>
+		<view class='shop_box'>
+			<image class='shop_logo' src='http://jph.zhue.com.cn/data/suplogo/1505261813098575635.jpg'></image>
+			<text class='shop_name'>西默农兽药</text>
+			<view class='clear'></view>
+		</view>
+	</view>
+	<view class='shop_ul'>
+		<view class='shop_list checked'>
+			<image src='images/shop_red.png'></image>
+			<text>店铺首页</text>
+		</view>
+		<view class='shop_list'>
+			<navigator>
+				<view>41</view>
+				<text>全部商品</text>
+			</navigator>
+		</view>
+		<view class='shop_list'>
+			<navigator>
+				<view>41</view>
+				<text>促销商品</text>
+			</navigator>
+		</view>
+		<view class='shop_list'>
+			<navigator>
+				<view>41</view>
+				<text>优惠券</text>
+			</navigator>
+		</view>
+	</view>
+	<scroll-view class='shop_coupon'  scroll-x>
+		<view class='sc_list'>
+			<view class='scl_top'>
+				<text class='sclt_amount'>￥3</text>
+				<text class='sclt_condi'><text>满28可用</text>全部商品</text>
+				<view class='clear'></view>
+			</view>
+			<view class='scl_btn'>立即领取</view>
+		</view>
+		<view class='sc_list sc_listg'>
+			<view class='scl_top'>
+				<text class='sclt_amount'>￥3</text>
+				<text class='sclt_condi'><text>满28可用</text>全部商品</text>
+				<view class='clear'></view>
+			</view>
+			<view class='scl_btn'>立即领取</view>
+		</view>
+		<view class='sc_list'>
+			<view class='scl_top'>
+				<text class='sclt_amount'>￥3</text>
+				<text class='sclt_condi'><text>满28可用</text>全部商品</text>
+				<view class='clear'></view>
+			</view>
+			<view class='scl_btn'>立即领取</view>
+		</view>
+		<view class='sc_list sc_listg'>
+			<view class='scl_top'>
+				<text class='sclt_amount'>￥3</text>
+				<text class='sclt_condi'><text>满28可用</text>全部商品</text>
+				<view class='clear'></view>
+			</view>
+			<view class='scl_btn'>立即领取</view>
+		</view>
+	</scroll-view>
+	<view class='shop_tit'>店长推荐</view>
+	<view class='shop_goods'>
+		<navigator>
+			<view class='sg_list'>
+				<image class='goods_img' src='http://www.zhue.cn/images/201705/thumb_img/1873_thumb_G_1494368476284.jpg'></image>
+				<view class='goods_name'>【西默农】劲驱 阿苯达唑伊维菌素粉，驱虫药 100g（全新包装）</view>
+				<view class='goods_msg'>
+					<view class='goods_price'>￥699</view>
+					<view class='goods_sales'>销量：30167</view>
+					<text class='clear'></text>
+				</view>
+				<view class='jiaob'>买一赠一</view>
+			</view>
+		</navigator>
+		<navigator>
+			<view class='sg_list'>
+				<image class='goods_img' src='http://www.zhue.cn/images/201705/thumb_img/1873_thumb_G_1494368476284.jpg'></image>
+				<view class='goods_name'>【西默农】劲驱 阿苯达唑伊维菌素粉，驱虫药 100g（全新包装）</view>
+				<view class='goods_msg'>
+					<view class='goods_price'>￥699</view>
+					<view class='goods_sales'>销量：30167</view>
+					<text class='clear'></text>
+				</view>
+				<view class='jiaob'>买一赠一</view>
+			</view>
+		</navigator>
+		<text class='clear'></text>
+	</view>
+	<view class='shop_tit'>全部商品</view>
+	<view class='shop_goods'>
+		<navigator>
+			<view class='sg_list'>
+				<image class='goods_img' src='http://www.zhue.cn/images/201705/thumb_img/1873_thumb_G_1494368476284.jpg'></image>
+				<view class='goods_name'>【西默农】劲驱 阿苯达唑伊维菌素粉，驱虫药 100g（全新包装）</view>
+				<view class='goods_msg'>
+					<view class='goods_price'>￥699</view>
+					<view class='goods_sales'>销量：30167</view>
+					<text class='clear'></text>
+				</view>
+				<view class='jiaob'>买一赠一</view>
+			</view>
+		</navigator>
+		<navigator>
+			<view class='sg_list'>
+				<image class='goods_img' src='http://www.zhue.cn/images/201705/thumb_img/1873_thumb_G_1494368476284.jpg'></image>
+				<view class='goods_name'>【西默农】劲驱 阿苯达唑伊维菌素粉，驱虫药 100g（全新包装）</view>
+				<view class='goods_msg'>
+					<view class='goods_price'>￥699</view>
+					<view class='goods_sales'>销量：30167</view>
+					<text class='clear'></text>
+				</view>
+				<view class='jiaob'>买一赠一</view>
+			</view>
+		</navigator>
+		<text class='clear'></text>
+	</view>
+</view>

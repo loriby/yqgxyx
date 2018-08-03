@@ -1,0 +1,12 @@
+/**app.wxss**/
+image{
+  display: block;
+}
+.clear{
+  clear: both;
+  display: block;
+}
+navigator{
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}

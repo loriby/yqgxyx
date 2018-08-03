@@ -1,0 +1,509 @@
+page{
+  background: #eeeeee;
+}
+.container{
+  padding-bottom: 82rpx;
+}
+swiper{
+  height: 700rpx;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  background: #fff;
+}
+.swip image{
+  width: 680rpx;
+  height: 680rpx;
+  margin: 0 auto;
+}
+
+.goods_msg{
+  padding: 0 20rpx 20rpx;
+  background: #fff;
+}
+.goods_name{
+  font-size: 28rpx;
+  color: #343434;
+  padding-top: 28rpx;
+  line-height: 40rpx;
+}
+.goods_instru{
+  color: #f61d30;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  margin-top: 10rpx;
+}
+.goods_price{
+  font-size: 36rpx;
+  margin-top: 10rpx;
+  color: #f52f2e;
+}
+.goods_price text{
+  width: 70rpx;
+  height: 32rpx;
+  background: #f52f2e;
+  color: #fff;
+  text-align: center;
+  line-height: 32rpx;
+  font-size: 24rpx;
+  display: inline-block;
+  border-radius: 6rpx;
+}
+.goods_countdown{
+  margin-top: 24rpx;
+  font-size: 24rpx;
+  color: #707070;
+}
+.goods_countdown text{
+  color: #333333;
+}
+.goods_prom{
+  margin-top: 26rpx;
+  border-top: 2rpx solid #efefef;
+  display: flex;
+}
+.gp_tit{
+  width: 78rpx;
+  font-size: 28rpx;
+  color: #686868;
+  margin-top: 20rpx;
+}
+.gp_msg{
+  flex: 1;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #353535;
+  line-height: 50rpx;
+}
+.gp_msg text{
+  display: inline-block;
+  height: 32rpx;
+  padding: 0 8rpx;
+  line-height: 32rpx;
+  border-radius: 8rpx;
+  border:2rpx solid #ee3030;
+  color: #ee3030;
+  margin-right: 12rpx;
+}
+.goods_coupon{
+  border-top: 2rpx solid #efefef;
+  margin-top: 20rpx;
+}
+.gc_tit{
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  color: #757575;
+  width: 100%;
+}
+.gc_titl{
+  float: left;
+}
+.gc_titr{
+  float: right;
+  width: 120rpx;
+  cursor: pointer;
+}
+.gc_titr text{
+  float: left;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+.gc_titr image{
+  width: 12rpx;
+  height: 22rpx;
+  margin-top: 10rpx;
+}
+.gc_titr image.cac_w{
+  width: 22rpx;
+  height: 12rpx;
+  margin-top: 15rpx;
+}
+.gc_wrap{
+  margin: 14rpx 20rpx 0;
+}
+.gcw_list{
+  width: 300rpx;
+  height: 154rpx;
+  float: left;
+  display: flex;
+  margin-top: 30rpx;
+}
+.gc_wrap view.gcw_list:nth-child(2n){
+  float: right;
+}
+.wl_left{
+  flex: 1;
+  border: 2rpx solid #f4263a;
+}
+.wl_right{
+  width: 30rpx;
+  padding: 12rpx 9rpx 0;
+  font-size: 24rpx;
+  background: url(http://www.zhue.cn/mobile/themes/zhue/images/applet/goods_coupon_r.png) no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+}
+.wll_top{
+  padding-left: 8rpx;
+  height: 80rpx;
+  border-bottom: 2rpx dashed #f4263a;
+}
+.wlt_price{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  color: #de4750;
+}
+.wlt_require{
+  font-size: 24rpx;
+  color: #202020;
+  margin-top: 10rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  overflow: hidden;
+}
+.wll_btm{
+  font-size: 24rpx;
+  color: #414141;
+  height: 48rpx;
+  line-height: 48rpx;
+  overflow: hidden;
+  padding-left: 8rpx;
+  overflow: hidden;
+}
+.wlr_g{
+  background: url(http://www.zhue.cn/mobile/themes/zhue/images/applet/goods_coupon_g.png) no-repeat;
+  background-size: 100% 100%;
+}
+.wll_g{
+  border-color: #8c8c8c;
+}
+.wll_g .wlt_price{
+  color: #787878;
+}
+.wll_g .wll_top{
+  border-color: #8c8c8c;
+}
+.wll_g .wlt_require{
+  color: #949494;
+}
+.wll_g .wll_btm{
+  color: #949494;
+}
+.goods_msg2{
+  border-top: 2rpx solid #f1f1f1;
+  margin-top: 20rpx;
+  padding-top: 16rpx;
+}
+.goods_msg2 view{
+  font-size: 28rpx;
+  color: #767676;
+  margin-top: 4rpx;
+}
+.goods_msg2 view text{
+  color: #363636;
+  display: inline-block;
+  margin-left: 10rpx;
+}
+.goods_msg3{
+  border-top: 2rpx solid #f1f1f1;
+  margin-top: 20rpx;
+  padding-top: 16rpx;
+}
+.goods_msg3 view{
+  font-size: 28rpx;
+  color: #767676;
+  margin-top: 4rpx;
+}
+.goods_msg3 view text{
+  color: #363636;
+  display: inline-block;
+  margin-left: 10rpx;
+  border: 2rpx solid #ef2f2e;
+  padding: 4rpx 6rpx;
+}
+
+.goods_address{
+  margin-top: 20rpx;
+  background: #fff;
+}
+.ga_send{
+  margin: 0 20rpx;
+  display: flex;
+  padding-top: 35rpx;
+}
+.gas_txt{
+  width: 80rpx;
+  font-size: 28rpx;
+  color: #727272
+}
+.gas_sele{
+  flex: 1;
+  font-size: 28rpx;
+  color: #363636;
+}
+.gas_arrow{
+  width: 12rpx;
+  height: 22rpx;
+  margin-top: 10rpx;
+}
+.gas_freight{
+  flex: 1;
+  font-size: 28rpx;
+  color: #303030;
+  line-height: 42rpx;
+}
+.ga_payway{
+  padding: 1px 20rpx 20rpx;
+  background: #f9f9f9;
+  margin-top: 34rpx;
+}
+.ga_payway image{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin: 20rpx 14rpx 0 0;
+}
+.ga_payway text{
+  float: left;
+  margin: 20rpx 40rpx 0 0;
+  font-size: 24rpx;
+  color: #989898;
+}
+.exp_service{
+  padding: 0 20rpx;
+  background: #fff;
+  height: 110rpx;
+  margin-top: 10rpx;
+  display: flex;
+}
+.es_icon{
+  width: 28rpx;
+  height: 28rpx;
+  margin-top: 41rpx;
+}
+.es_name{
+  width: 130rpx;
+  font-size: 28rpx;
+  color: #343434;
+  margin-left: 16rpx;
+  line-height: 110rpx;
+}
+.es_describe{
+  width: 400rpx;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  margin-top: 19rpx;
+}
+.es_arrow{
+  width: 12rpx;
+  height: 22rpx;
+  padding: 44rpx 20rpx 0;
+}
+.es_place{
+  flex: 1;
+}
+.goods_shop{
+  padding: 0 20rpx;
+  background: #fff;
+  height: 148rpx;
+  margin-top: 10rpx;
+  display: flex;
+}
+.gs_logo{
+  width: 165rpx;
+  height: 92rpx;
+  margin: 28rpx 28rpx 0 0;
+}
+.gs_msg{
+  flex: 1;
+}
+.gsm_name{
+  color: #030303;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.gsm_address{
+  font-size: 24rpx;
+  color: #969696;
+  margin-top: 8rpx;
+}
+.gs_btn{
+  width: 170rpx;
+  height: 58rpx;
+  border: 2rpx solid #cbcbcb;
+  border-radius: 10rpx;
+  margin-top: 44rpx;
+}
+.gsm_count{
+  font-size: 24rpx;
+  color: #969696;
+  margin-top: 6rpx;
+}
+.gs_btn image{
+  width: 28rpx;
+  height: 28rpx;
+  margin: 16rpx 0 0 16rpx;
+  float: left;
+}
+.gs_btn text{
+  font-size: 24rpx;
+  color: #323232;
+  margin-left: 12rpx;
+  line-height: 58rpx;
+}
+.goods_comments{
+  width: 100%;
+  background: #fff;
+}
+.gcom_tit{
+  height: 96rpx;
+  padding: 0 20rpx;
+  margin-top: 10rpx;
+  border-bottom: 2rpx solid #f0f0f0;
+}
+.gct_left{
+  float: left;
+  font-size: 28rpx;
+  color: #2d2d2d;
+  line-height: 96rpx;
+}
+.gct_right{
+  float: right;
+  font-size: 28rpx;
+  color: #292929;
+  line-height: 96rpx;
+}
+.gct_right text{
+  color: #ff1822;
+}
+.gcom_list{
+  padding: 0 20rpx 20rpx;
+  border-bottom: 2rpx solid #f1f1f1;
+}
+.cl_msg{
+  display: flex;
+  margin-top: 28rpx;
+}
+.clm_img{
+  width: 146rpx;
+  height: 24rpx;
+}
+.clm_name{
+  flex: 1;
+  text-align: right;
+  color: #919191;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+}
+.clm_time{
+  width: 240rpx;
+  font-size: 24rpx;
+  color: #919191;
+}
+.cl_cont{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+  color: #343434;
+}
+.cl_imgs{
+  width: 100%;
+}
+.cli_img{
+  width: 150rpx;
+  height: 134rpx;
+  border: 2rpx solid #f2f2f2;
+  float: left;
+  margin: 20rpx 20rpx 0 0;
+}
+.cli_img image{
+  height: 100%;
+  width: auto;
+}
+.cl_revet{
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #fa4200;
+  margin-top: 40rpx;
+}
+.cl_add_tit{
+  color: #f03530;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.cl_add_cont{
+  color: #2f2f2f;
+  font-size: 28rpx;
+  margin-top: 12rpx;
+}
+.goods_detail{
+  background: #fff;
+  margin-top: 20rpx;
+}
+.gd_tit{
+  display: flex;
+  height: 76rpx;
+  border-bottom: 2rpx solid #ececec;
+}
+.gd_tit view{
+  flex: 1;
+  text-align: center;
+  line-height: 76rpx;
+  color: #2e2e2e;
+  font-size: 28rpx;
+}
+.gd_tit view.checked{
+  border-bottom: 4rpx solid #f52f2c;
+  color: #f52f2c;
+}
+.goods_buy{
+  height: 80rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  border-top: 2rpx solid #f1f1f1;
+  background: #fff;
+}
+.gb_cart{
+  width: 160rpx;
+}
+.gb_cart image{
+  width: 30rpx;
+  margin: 0 auto;
+  height: 30rpx;
+  margin-top: 16rpx;
+}
+.gb_cart text{
+  display: block;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 34rpx;
+}
+.gb_add{
+  flex: 1;
+  font-size: 28rpx;
+  background: #f23030;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+}
+.gd_intro{
+  width: 100%;
+}
+.gd_intro image{
+  width: 100%;
+}
+.changeH{
+  height: 190rpx;
+  overflow: hidden;
+}
+.showImgWrap{
+  width: 100%;
+  height: 100%;
+  background: #595757;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}

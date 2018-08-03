@@ -1,0 +1,143 @@
+<!--index.wxml-->
+<view class='container'>
+
+  <!-- logo、搜索 --> 
+  <view class='search_wrap'>
+		<view class="idx_search" bindtap='search'>
+			<!-- <image class='idx_logo' src='images/idx_logo.png'></image> -->
+			<!-- <image class='idx_search_img' src="images/idx_search.png"/> -->
+			<text >搜索商品</text>
+		</view>
+	</view>
+  <!-- logo、搜索 END --> 
+
+  <!-- 导航 -->
+  <view class='idx_nav'>
+    
+    <view class='in_list'>
+      <navigator url=''>
+        <image src="images/shouyao.png"/>
+        <view>兽药</view>
+      </navigator>
+    </view>
+    
+    <view class='in_list'>
+      <navigator url=''>
+        <image src="images/siliao.png"/>
+        <view>饲料</view>
+      </navigator>
+    </view>
+    
+    <view class='in_list'>
+      <navigator url=''>
+        <image src="images/tianjiaji.png"/>
+        <view>添加剂</view>
+      </navigator>
+    </view>
+    
+    <view class='in_list'>
+      <navigator url=''>
+        <image src="images/shebei.png"/>
+        <view>设备</view>
+      </navigator>
+    </view>
+    
+    <view class='in_list'>
+      <navigator url=''>
+        <image src="images/dingdan.png"/>
+        <view>我的订单</view>
+      </navigator>
+    </view>
+
+  </view>
+  <!-- 导航 END -->
+<button wx:if="{{!canIUse}}" open-type="getUserInfo">99</button>
+  <!-- 商品 -->
+  <view class="idx_btm" id="ib_top">
+
+    <!-- 商品头部 -->
+    <view class="ib_top {{navClass}}">
+      <view bindtap='tab' data-name="selected" class="{{firstClass}}">
+        <text>全部商品</text>
+      </view>
+      <view bindtap='tab' data-name="selected1" class="{{secondClass}}">
+        <text>唯美女装</text>
+      </view>
+      <view bindtap='tab' data-name="selected2" class="{{thirdClass}}">
+        <text>酷拽男装</text>
+      </view>
+    </view>
+    <!-- 商品头部 END -->
+
+    <!-- 商品底部 -->
+    <view class='ib_btm'>
+      <!-- 每日特价 -->
+      <view class='ib_list' hidden='{{firstClass === "checked" ? false : true}}'>
+				<navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{goodsData}}">
+					<view class='ib_goods {{index%2 === 1 ? "fr" : ""}}'>
+						<image class='goods_img' src="{{item.pic_url}}"/>
+						<view class='goods_msg'>
+							<view class='goods_name'>{{item.title}}</view>
+							<view class='goods_intro'>{{item.intro}}</view>
+							<!-- <view class='goods_price'>￥{{item.coupon_price}} <text>{{item.quan}}元优惠券</text></view> -->
+							<view class="goods_buy">
+								<view class='goods_buyl'>￥{{item.coupon_price}}</view>
+								<!-- <view class='goods_buyr'>立即购买</view> -->
+								<view class='goods_comments'>销量：{{item.volume}}</view>
+								<text class='clear'></text>
+							</view>
+							<view class='jiaobiao'>立减{{item.quan}}</view>
+						</view>
+					</view>
+				</navigator>
+				<text class='clear'></text>
+			</view>
+      <!-- 女装 -->
+      <view class='ib_list' hidden='{{secondClass === "checked" ? false : true}}'>
+				<navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{girlData}}">
+					<view class='ib_goods {{index%2 === 1 ? "fr" : ""}}'>
+						<image class='goods_img' src="{{item.pic_url}}"/>
+						<view class='goods_msg'>
+							<view class='goods_name'>{{item.title}}</view>
+							<view class='goods_intro'>{{item.intro}}</view>
+							<!-- <view class='goods_price'>￥{{item.coupon_price}} <text>{{item.quan}}元优惠券</text></view> -->
+							<view class="goods_buy">
+								<view class='goods_buyl'>￥{{item.coupon_price}}</view>
+								<!-- <view class='goods_buyr'>立即购买</view> -->
+								<view class='goods_comments'>销量：{{item.volume}}</view>
+								<text class='clear'></text>
+							</view>
+							<view class='jiaobiao'>立减{{item.quan}}</view>
+						</view>
+					</view>
+				</navigator>
+				<text class='clear'></text>
+			</view>
+      <!-- 男装 -->
+      <view class='ib_list' hidden='{{thirdClass === "checked" ? false : true}}'>
+				<navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{boyData}}">
+					<view class='ib_goods {{index%2 === 1 ? "fr" : ""}}'>
+						<image class='goods_img' src="{{item.pic_url}}"/>
+						<view class='goods_msg'>
+							<view class='goods_name'>{{item.title}}</view>
+							<view class='goods_intro'>{{item.intro}}</view>
+							<!-- <view class='goods_price'>￥{{item.coupon_price}} <text>{{item.quan}}元优惠券</text></view> -->
+							<view class="goods_buy">
+								<view class='goods_buyl'>￥{{item.coupon_price}}</view>
+								<!-- <view class='goods_buyr'>立即购买</view> -->
+								<view class='goods_comments'>销量：{{item.volume}}</view>
+								<text class='clear'></text>
+							</view>
+							<view class='jiaobiao'>立减{{item.quan}}</view>
+						</view>
+					</view>
+				</navigator>
+				<text class='clear'></text>
+			</view>
+    </view>
+    <!-- 商品底部 END -->
+
+  </view>
+  <!-- 商品 END -->
+
+</view>

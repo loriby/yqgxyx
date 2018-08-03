@@ -1,0 +1,46 @@
+<!--pages/index/search/search.wxml-->
+<view class='container'>
+	<view class='search_box'>
+		<input placeholder='请输入商品名称'></input>
+		<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/search.png'></image>
+	</view>
+	<view class='search_options'>
+		<view class='so_list checked'>综合</view>
+		<view class='so_list'>销量</view>
+		<view class='so_list'>
+			<text>价格</text>
+			<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/price.png'></image>
+		</view>
+		<view class='so_list'>
+			<text>筛选</text>
+			<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/screening.png'></image>
+		</view>
+	</view>
+	<view class='shop_goods'>
+		<navigator>
+			<view class='sg_list'>
+				<image class='goods_img' src='http://www.zhue.cn/images/201705/thumb_img/1873_thumb_G_1494368476284.jpg'></image>
+				<view class='goods_name'>【西默农】劲驱 阿苯达唑伊维菌素粉，驱虫药 100g（全新包装）</view>
+				<view class='goods_msg'>
+					<view class='goods_price'>￥699</view>
+					<view class='goods_sales'>销量：30167</view>
+					<text class='clear'></text>
+				</view>
+				<view class='jiaob'>买一赠一</view>
+			</view>
+		</navigator>
+		<navigator>
+			<view class='sg_list'>
+				<image class='goods_img' src='http://www.zhue.cn/images/201705/thumb_img/1873_thumb_G_1494368476284.jpg'></image>
+				<view class='goods_name'>【西默农】劲驱 阿苯达唑伊维菌素粉，驱虫药 100g（全新包装）</view>
+				<view class='goods_msg'>
+					<view class='goods_price'>￥699</view>
+					<view class='goods_sales'>销量：30167</view>
+					<text class='clear'></text>
+				</view>
+				<view class='jiaob'>买一赠一</view>
+			</view>
+		</navigator>
+		<text class='clear'></text>
+	</view>
+</view>

@@ -1,0 +1,67 @@
+/* pages/user/order_tracking/order_tracking.wxss */
+page{
+	background: #f0f0f0;
+}
+.ot_msg{
+	padding: 20rpx;
+	background: #ffffff;
+	border-top: 2rpx solid #f0f0f0;
+}
+.ot_order{
+	font-size: 28rpx;
+	color: #999;
+	line-height: 40rpx;
+}
+.ot_order text{
+	color: #323232;
+}
+.ot_wrap{
+	padding: 26rpx 20rpx 0;
+	background: #fff;
+	margin-top: 20rpx;
+}
+.ot_box{
+	padding-left: 34rpx;
+	border-left: 2rpx solid #ededed;
+}
+.dot_r{
+	width: 22rpx;
+	height: 22rpx;
+	margin-left: -44rpx;
+	float: left;
+}
+.express_msg{
+	padding-bottom: 20rpx;
+}
+.em_txt{
+	font-size: 28rpx;
+	color: #333333;
+}
+.em_time{
+	font-size: 24rpx;
+	color: #999999;
+	margin-top: 12rpx;
+}
+.otb{
+	border-bottom: 2rpx solid #ededed;
+	margin-bottom: 24rpx;	
+}
+.express_msgr .em_txt{
+	color: #f13031;
+}
+.express_msgr .em_time{
+	color: #f13031;
+}
+.kefu{
+	width: 72rpx;
+	height: 72rpx;
+	position: fixed;
+	top: 50%;
+	right: 20rpx;
+	margin-top: 36rpx;
+}
+.kefu image{
+	width: 100%;
+	height: 100%;
+	box-shadow: 6rpx 6rpx 6rpx #f23030;
+}

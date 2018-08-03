@@ -1,0 +1,113 @@
+page{
+  background: #f0f0f0;
+}
+.ol_wrap{
+  width: 100%;
+  height: 94rpx;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  font-size: 32rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.ol_list{
+  flex: 1;
+  color: #333333;
+  text-align: center;
+  line-height: 94rpx;
+}
+.ol_list text{
+  color: #f23030;
+}
+.ol_wrap .checked{
+  border-bottom: 4rpx solid #f23031;
+  color: #f33132;
+  height: 90rpx;
+}
+.order_wrap{
+  padding-top: 94rpx;
+}
+.ol_order{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.olo_id{
+  height: 70rpx;
+  background: #f7f7f7;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 70rpx;
+  text-indent: 20rpx;
+}
+.olo_time{
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #f0f0f0;
+  text-indent: 20rpx;
+  color: #999;
+}
+.olo_goods{
+  border-bottom: 2rpx solid #f0f0f0;
+  height: 200rpx;
+  display: flex;
+}
+.og_list{
+  flex: 1;
+  margin-left: 20rpx;
+  height: 200rpx;
+}
+.og_list image{
+  height: 160rpx;
+  width: 160rpx;
+  margin: 20rpx 20rpx 0;
+  display: inline-block;
+}
+.og_arrow{
+  width: 16rpx;
+  height: 26rpx;
+  padding: 87rpx 20rpx 0;
+}
+.ogl_wrap{
+  white-space: nowrap;
+  width:674rpx;
+  display: flex
+}
+.og_pay{
+  padding: 0 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.ogp_mon{
+  float: left;
+  font-size: 28rpx;
+  color: #343434;
+}
+.ogp_btn{
+  float: right;
+  width: 152rpx;
+  height: 48rpx;
+  font-size: 24rpx;
+  text-align: center;
+  border: 2rpx solid #f23030;
+  line-height: 48rpx;
+  margin-top: 13rpx;
+  color: #f23030;
+  border-radius: 10rpx;
+}
+.ogp_btn_ddgz{
+  float: right;
+  width: 152rpx;
+  height: 48rpx;
+  font-size: 24rpx;
+  text-align: center;
+  border: 2rpx solid #a0a0a0;
+  line-height: 48rpx;
+  margin-top: 13rpx;
+  color: #333333;
+  border-radius: 10rpx;
+}

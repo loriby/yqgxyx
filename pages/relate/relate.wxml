@@ -1,0 +1,18 @@
+<view class="container">
+	<view class="paompt">您正在使用的是微信分配的临时会员，不支持在线支付，请关联您已有的猪易商城或猪易通账号，或直接创建一个新账号。</view>
+	<form>
+		<view class='wrap'>
+			<view class='tit'>关联已有猪易商城或猪易通帐号（登录即可关联）</view>
+			<input class="username" type='text' placeholder='邮箱/用户名/已验证手机号'></input>
+			<input class="username" type='text' placeholder='密码'></input>
+			<button class='login_btn'>确定登录</button>
+		</view>
+		<view class='login_ps'>
+			<view></view>
+			<text>使用微信一键登录</text>
+		</view>
+		<view class='wrap'>
+			<navigator class='login_btn creat'>创建一个新账号</navigator>
+		</view>
+	</form>
+</view>

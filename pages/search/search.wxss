@@ -1,0 +1,104 @@
+/* pages/index/search/search.wxss */
+page{
+	background: #f4f4f4;
+}
+.search_box{
+	padding: 0 20rpx;
+	background: #fff;
+	height: 66rpx;
+	border-bottom: 2rpx solid #ececec;
+	padding-top: 14rpx;
+	position: relative
+}
+.search_box input{
+	height: 52rpx;
+	background: #e9e8ee;
+	border-radius: 30rpx;
+	padding-left: 60rpx;
+	font-size: 24rpx;
+	color: #333;
+}
+.search_box image{
+	position: absolute;
+	width: 27rpx;
+	height: 27rpx;
+	top: 27rpx;
+	left: 40rpx;
+	z-index: 1;
+}
+.search_options{
+	display: flex;
+	height: 72rpx;
+	line-height: 72rpx;
+	background: #fff;
+	border-bottom: 2rpx solid #ececec;
+}
+.so_list{
+	flex: 1;
+	text-align: center;
+	font-size: 24rpx;
+	color: #333333;
+}
+.so_list image{
+	width: 17rpx;
+	height: 23rpx;
+	display: inline-block;
+	margin-left: 10rpx;
+}
+.so_list text{
+	display: inline-block;
+}
+.search_options .checked{
+	color: #f23030;
+}
+.shop_goods{
+	width: 100%;
+	margin-bottom: 6rpx;
+}
+.shop_goods navigator:nth-child(2n) .sg_list{
+	float: right;
+}
+.sg_list{
+	width: 49.2%;
+	float: left;
+	background: #fff;
+	padding-bottom: 30rpx;
+	position: relative;
+	margin-bottom: 14rpx;
+}
+.goods_img{
+	width: 100%;
+}
+.goods_name{
+	font-size: 28rpx;
+	color: #000;
+	line-height: 36rpx;
+	margin: 0 20rpx;
+	height: 72rpx;
+	overflow: hidden;
+}
+.goods_msg{
+	margin: 36rpx 20rpx 0;
+}
+.goods_price{
+	font-size: 32rpx;
+	color: #f13130;
+	float: left;
+}
+.goods_sales{
+	float: right;
+	font-size: 28rpx;
+	color: #999999;
+}
+.jiaob{
+	width: 61rpx;
+	height: 80rpx;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(http://www.zhue.cn/mobile/themes/zhue/images/applet/jiaobiao.png) no-repeat;
+	background-size: 100% 100%;
+	font-size: 28rpx;
+	color: #fff;
+	padding: 6rpx 12rpx 0;
+}
