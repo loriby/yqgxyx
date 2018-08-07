@@ -10,48 +10,54 @@
 		</view>
 	</view>
   <!-- logo、搜索 END --> 
-
+	<swiper class='shuffing_wrap' autoplay="true" indicator-dots="true" indicator-active-color="#f0f" indicator-color="#fff" interval="2000" circular="true">
+		<swiper-item wx:for="{{banImg}}">
+			<navigator url='../goods/goods?id={{item.dtkid}}'>
+				<image src='{{item.pic}}'></image>
+			</navigator>
+		</swiper-item>
+	</swiper>
   <!-- 导航 -->
-  <view class='idx_nav'>
+  <view class='idx_nav' hidden='true'>
     
     <view class='in_list'>
       <navigator url=''>
         <image src="images/shouyao.png"/>
-        <view>兽药</view>
+        <view>男装</view>
       </navigator>
     </view>
     
     <view class='in_list'>
       <navigator url=''>
         <image src="images/siliao.png"/>
-        <view>饲料</view>
+        <view>女装</view>
       </navigator>
     </view>
     
     <view class='in_list'>
       <navigator url=''>
         <image src="images/tianjiaji.png"/>
-        <view>添加剂</view>
+        <view>鞋子</view>
       </navigator>
     </view>
     
     <view class='in_list'>
       <navigator url=''>
         <image src="images/shebei.png"/>
-        <view>设备</view>
+        <view>居家</view>
       </navigator>
     </view>
     
     <view class='in_list'>
       <navigator url=''>
         <image src="images/dingdan.png"/>
-        <view>我的订单</view>
+        <view>其他</view>
       </navigator>
     </view>
 
   </view>
   <!-- 导航 END -->
-<button wx:if="{{!canIUse}}" open-type="getUserInfo">99</button>
+	<view class='login_wrap' hidden='{{canIUse}}'><button class='login_btn' open-type="getUserInfo" bindgetuserinfo="getPermissios">点我登录</button></view>
   <!-- 商品 -->
   <view class="idx_btm" id="ib_top">
 

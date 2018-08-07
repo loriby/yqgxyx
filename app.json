@@ -3,6 +3,7 @@
 		"pages/index/index",
     "pages/search/search",
     "pages/suppliers/suppliers",
+		"pages/grab/grab",
 		"pages/goods/goods",
 		"pages/goods/goods_img/goods_img",
 		"pages/goods/goods_comment/goods_comment",
@@ -44,10 +45,10 @@
         "text": "首页"
       },
 			{
-				"pagePath": "pages/cart/cart",
+				"pagePath": "pages/grab/grab",
 				"iconPath": "images/cart_g.png",
 				"selectedIconPath": "images/cart.png",
-				"text": "购物车"
+				"text": "限时疯抢"
 			},
       {
         "pagePath": "pages/user/user",

@@ -1,0 +1,20 @@
+<view class='ib_list'>
+	<navigator url='/pages/goods/goods?id={{item.dtkid}}' wx:for="{{goodsData}}">
+		<view class='ib_goods {{index%2 === 1 ? "fr" : ""}}'>
+			<image class='goods_img' src="{{item.pic}}"/>
+			<view class='goods_msg'>
+				<view class='goods_name'>{{item.title}}</view>
+				<view class='goods_intro'>{{item.intro}}</view>
+				<!-- <view class='goods_price'>￥{{item.coupon_price}} <text>{{item.quan}}元优惠券</text></view> -->
+				<view class="goods_buy">
+					<view class='goods_buyl'>￥{{item.pri}}</view>
+					<!-- <view class='goods_buyr'>立即购买</view> -->
+					<view class='goods_comments'>销量：{{item.volume}}</view>
+					<text class='clear'></text>
+				</view>
+				<view class='jiaobiao'>立减{{item.coupon}}</view>
+			</view>
+		</view>
+	</navigator>
+	<text class='clear'></text>
+</view>

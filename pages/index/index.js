@@ -15,7 +15,8 @@ Page({
 		getIdx: 1,
 		girlData: '',
 		boyData: '',
-		canIUse: wx.canIUse('button.open-type.getUserInfo')
+		canIUse: true,
+		banImg: ''
   },
   tab: function (e) {
     var thisName=e.currentTarget.dataset.name;
@@ -46,7 +47,13 @@ Page({
   },
 	onLoad: function(e){
 		this.getGoodsData();
-		this.wx_login();
+		this.getBanner();
+		
+		if(wx.getStorageSync('user_id') == ''){
+			this.setData({
+				canIUse: false
+			})
+		}
 	},
 	onPageScroll: function (e) {
 		var that = this;
@@ -124,32 +131,37 @@ Page({
 		const that = this;
 
 		if(!session_id){
+			//登录
 			wx.login({
 				success: function (res) {
 					if (res.code) {
 						const postData = {
 							code: res.code
 						}
-
+						//获取登录信息
 						utils.getData(utils.baseUrl + 'login.php?act=login', 'GET', postData, function (res) {
 							const openid = res.data.openid;
-							let session_key = res.data.session_key;
+							const is_have = res[0];
+							const session_key = res.data.session_key;
 							
 							wx.getSetting({
 								success(r) {
 									wx.setStorageSync('user_id', session_key);
+									wx.setStorageSync('openid', openid);
 									
-									if (r.authSetting['scope.userInfo']){
-										wx.getUserInfo({
-											success: function(res){
-												let data = res.userInfo;
-												data.openid = openid;
+									if(is_have === 0){
+										if (r.authSetting['scope.userInfo']) {
+											wx.getUserInfo({
+												success: function (res) {
+													let data = res.userInfo;
+													data.openid = openid;
 
-												utils.getData(utils.baseUrl + 'login.php?act=msg', 'POST', data, function (res) {
-													
-												})
-											}
-										})
+													utils.getData(utils.baseUrl + 'login.php?act=msg', 'POST', data, function (res) {
+														console.log(res)
+													})
+												}
+											})
+										}
 									}
 								}
 							})
@@ -162,11 +174,21 @@ Page({
 			})
 		}
 	},
-	getUserInfo: function(e){
-		const data = e.detail.userInfo;
+	getBanner: function(e){
+		const that = this;
 
-		utils.getData(utils.baseUrl+'login.php?act=msg','POST',data,function(res){
-			console.log(res)
+		utils.getData(utils.baseUrl+'index.php?act=banner','GET','',function(res){
+			that.setData({
+				banImg: res.data
+			})
 		})
+	},
+	getPermissios: function(e){
+		if (e.detail.rawData){
+			this.wx_login();
+			this.setData({
+				canIUse: true
+			})
+		}
 	}
 })

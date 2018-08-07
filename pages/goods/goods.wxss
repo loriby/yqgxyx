@@ -38,15 +38,17 @@ swiper{
   color: #f52f2e;
 }
 .goods_price text{
-  width: 70rpx;
-  height: 32rpx;
-  background: #f52f2e;
-  color: #fff;
-  text-align: center;
-  line-height: 32rpx;
-  font-size: 24rpx;
-  display: inline-block;
-  border-radius: 6rpx;
+	font-size: 24rpx;
+	color: #999;
+	display: inline-block;
+	margin-left: 10rpx;
+	text-decoration: line-through;
+}
+.goods_price view{
+	float: right;
+	font-size: 24rpx;
+	color: #999;
+	line-height: 48rpx;
 }
 .goods_countdown{
   margin-top: 24rpx;
@@ -506,4 +508,21 @@ swiper{
   top: 0;
   left: 0;
   z-index: 11;
+}
+.ranking{
+	display: flex;
+	margin-top: 20rpx;
+}
+.ranking view{
+	flex: 1;
+	display: block;
+	font-size: 24rpx;
+	color: #333;
+	text-align: center;
+}
+.ranking text.green{
+	color: #00BA97;
+}
+.ranking text.red{
+	color: #F40;
 }

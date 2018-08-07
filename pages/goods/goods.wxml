@@ -1,8 +1,8 @@
 <view class="container">
   <!-- 商品图轮播 -->
-  <swiper indicator-dots='true' circular="true" class="swip" indicator-active-color="#f23030">
-    <swiper-item>
-      <image src='{{goods.pic_url}}'></image>
+  <swiper indicator-dots='true' autoplay='true' interval='2000' circular="true" class="swip" indicator-active-color="#f23030">
+    <swiper-item wx:for="{{banners}}">
+      <image src='{{item}}'></image>
     </swiper-item>
   </swiper>
   <!-- 商品图轮播 END -->
@@ -10,8 +10,13 @@
   <!-- 商品信息 -->
   <view class='goods_msg'>
     <view class='goods_name'>{{goods.title}}</view>
-    <view class='goods_instru'>{{goods.intro}}</view>
-    <view class='goods_price'>￥{{goods.coupon_price}} </view>
+    <view class='goods_instru'>{{goods.disc}}</view>
+    <view class='goods_price'>￥{{goods.pri}} <text>{{goods.bpri[1]}}：{{goods.bpri[0]}}元</text><view>已售：{{goods.volume}}</view></view>
+		<view class='ranking'>
+			<view>宝贝描述：<text class='{{goods.discribe > 4.6 ? "red" : "green"}}'>{{goods.discribe}}</text></view>
+			<view>卖家服务：<text class='{{goods.sservice > 4.6 ? "red" : "green"}}'>{{goods.sservice}}</text></view>
+			<view>物流服务：<text class='{{goods.wservice > 4.6 ? "red" : "green"}}'>{{goods.wservice}}</text></view>
+		</view>
 		<!-- <text>促销</text>
     <view class="goods_countdown">还剩 <text>{{countdown}}</text></view>
     <view class='goods_prom'>

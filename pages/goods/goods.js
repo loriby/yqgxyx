@@ -42,7 +42,8 @@ Page({
     showCoup:'changeH',
     coupArrow:'images/right-j.png',
     coupArrCla:'',
-		goods: ''
+		goods: '',
+		banners:''
   },
   tab:function(e){
     var name=e.currentTarget.dataset.name;
@@ -69,7 +70,8 @@ Page({
     countDownT(this);
 		utils.getData(utils.baseUrl + 'goods.php', 'post', postData,function(res){
 			that.setData({
-				goods: res.data[0]
+				goods: res,
+				banners: res.img[0]
 			})
 		})
   },
@@ -97,11 +99,11 @@ Page({
     })
   },
 	copy:function(e){
-		const goodsUrl = this.data.goods.click_url;
-
+		const goodsUrl = this.data.goods.tkl[0];
+		
 		utils.copy(goodsUrl, function(res){
 			wx.showToast({
-				title: '链接复制成功，打开浏览器粘贴访问！',
+				title: '复制成功，打开手机淘宝即可查看并下单！',
 				icon: 'none',
 				duration: 2000
 			})

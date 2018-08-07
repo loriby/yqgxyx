@@ -1,0 +1,131 @@
+page{
+	background: #f4f4f4;
+}
+.ib_goods{
+  width: 49.4%;
+  border-bottom: 2rpx solid #f6f6f6;
+  background: #fff;
+	float: left;
+	margin-top: 8rpx;
+	position: relative;
+}
+.fr{
+	float: right;
+}
+.goods_img{
+  width: 355rpx;
+  height: 355rpx;
+	display: block;
+	margin: 0 auto;
+}
+.goods_msg{
+  flex: 1;
+	margin: 0 16rpx;
+}
+.goods_name{
+  font-size: 32rpx;
+  color: #333333;
+  line-height: 42rpx;
+	margin-top: 10rpx;
+  height: 84rpx;
+  overflow: hidden;
+}
+.goods_price{
+  float: left;
+  font-size: 12px;
+  color:#989898;
+  line-height: 52rpx;
+}
+.goods_price text{
+  font-size: 24rpx;
+  padding: 4rpx 0 4rpx 6rpx;
+  /* border: 2rpx solid #f23030; */
+  border-radius: 8rpx;
+  margin-left: 6rpx;
+  float:right;
+}
+.goods_buy{
+	margin-top: 20rpx;
+}
+.goods_buyl{
+  font-size: 32rpx;
+  color: #f23030;
+	line-height: 56rpx;
+	height: 44rpx;
+	float: left;
+}
+.goods_buyr{
+  float: right;
+  width: 130rpx;
+  height: 52rpx;
+  background: #f23030;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 52rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+
+.goods_volume{
+   float: left;
+  font-size: 12px;
+  color:#989898;
+  line-height: 52rpx;
+}
+
+.goods_jx_price{
+  font-size: 28rpx;
+  color: #f23030;
+  margin-top: 40rpx;
+  float: left;
+}
+.goods_jx_price text{
+  font-size: 24rpx;
+  padding: 4rpx 6rpx;
+  border: 2rpx solid #f23030;
+  border-radius: 8rpx;
+}
+.goods_jx_buyr{
+  float: right;
+  width: 130rpx;
+  height: 52rpx;
+  background: #f23030;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 52rpx;
+  border-radius: 10rpx;
+  margin: 40rpx 20rpx 0 0;
+}
+.goods_comments {
+	float:right;
+	font-size:24rpx;
+	color:#999;
+	line-height:56rpx;
+}
+.goods_intro{
+	font-size: 24rpx;
+	color: #999;
+	margin-top: 12rpx;
+	height: 28rpx;
+	line-height: 28rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.jiaobiao{
+	width: 40px;
+	height: 40px;
+	background: url(https://www.xriml.com/applet/images/jiaobiao.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 12px;
+	padding: 2px 5px 0;
+	box-sizing: border-box;
+	text-align: center;
+	color: #fff;
+	overflow: hidden;
+}
