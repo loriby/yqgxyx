@@ -1,7 +1,7 @@
 {
   "pages":[
 		"pages/index/index",
-    "pages/search/search",
+		"pages/search/search",
     "pages/suppliers/suppliers",
 		"pages/grab/grab",
 		"pages/goods/goods",
@@ -48,7 +48,7 @@
 				"pagePath": "pages/grab/grab",
 				"iconPath": "images/cart_g.png",
 				"selectedIconPath": "images/cart.png",
-				"text": "限时疯抢"
+				"text": "超级购"
 			},
       {
         "pagePath": "pages/user/user",

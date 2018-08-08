@@ -2,13 +2,19 @@
 <view class='container'>
 
   <!-- logo、搜索 --> 
+<form bindsubmit='subData'>
   <view class='search_wrap'>
-		<view class="idx_search" bindtap='search'>
-			<!-- <image class='idx_logo' src='images/idx_logo.png'></image> -->
-			<!-- <image class='idx_search_img' src="images/idx_search.png"/> -->
-			<text >搜索商品</text>
+		<view class='search_box'>
+			<view class="idx_search" bindtap='search' hidden='{{!searchStatus}}'>
+				<text>搜索商品</text>
+			</view>
+			<view class='idx_search {{!searchStatus ? "br0" : ""}}' hidden='{{searchStatus}}'>
+				<view><input bindblur='hiddenSearch' name="sear_cont" focus='{{!searchStatus}}' type='text'/></view>
+			</view>
+			<button class='search_btn' hidden='{{searchStatus}}' form-type="submit">搜索</button>
 		</view>
 	</view>
+</form>
   <!-- logo、搜索 END --> 
 	<swiper class='shuffing_wrap' autoplay="true" indicator-dots="true" indicator-active-color="#f0f" indicator-color="#fff" interval="2000" circular="true">
 		<swiper-item wx:for="{{banImg}}">
@@ -79,7 +85,7 @@
     <view class='ib_btm'>
       <!-- 每日特价 -->
       <view class='ib_list' hidden='{{firstClass === "checked" ? false : true}}'>
-				<navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{goodsData}}">
+				<navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{goodsData}}" wx:key='temai' wx:for-index='index'>
 					<view class='ib_goods {{index%2 === 1 ? "fr" : ""}}'>
 						<image class='goods_img' src="{{item.pic_url}}"/>
 						<view class='goods_msg'>

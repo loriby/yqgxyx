@@ -192,12 +192,16 @@
 
   <view class='goods_buy'>
     <view class='gb_cart'>
-      <image src='../index/images/idx_index.png'></image>
-      <text>首页</text>
+      <navigator url='../index/index' open-type="switchTab">
+				<image src='../index/images/idx_index.png'></image>
+      	<text>首页</text>
+			</navigator>
     </view>
     <view class='gb_cart'>
-      <image src='../../images/cate.png'></image>
-      <text>分类</text>
+      <navigator url='../grab/grab' open-type="switchTab">
+				<image src='../../images/cart_g.png'></image>
+				<text>超级购</text>
+			</navigator>
     </view>
     <view class='gb_add' bindtap='copy'>
       立即购买

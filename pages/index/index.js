@@ -16,11 +16,14 @@ Page({
 		girlData: '',
 		boyData: '',
 		canIUse: true,
-		banImg: ''
+		banImg: '',
+		searchStatus: true,
+		navClass: ''
   },
   tab: function (e) {
     var thisName=e.currentTarget.dataset.name;
 		let cate;
+		let posi;
 
     for(var i in arr){
       if (arr[i][0] == thisName){
@@ -29,19 +32,26 @@ Page({
 					cate = 'hot';
 				} else if (i === 'selected1'){
 					cate = 'girl';
+					if(this.data.girlData == '' && this.data.wT < 0){
+						posi = '';
+					}
 				}else{
 					cate = 'boy';
+					if (this.data.boyData == '' && this.data.wT < 0) {
+						posi = '';
+					}
 				}
       }else{
         arr[i][1] = '';
       }
     }
 
-    this.setData({
+		this.setData({
+			navClass: posi,
       firstClass: arr['selected'][1],
       secondClass: arr['selected1'][1],
       thirdClass: arr['selected2'][1],
-			getIdx: 1
+			getIdx: 1,
     })
 		this.getGoodsData(cate,1);
   },
@@ -102,17 +112,42 @@ Page({
 		getIdx ? getIdx : getIdx = 1;
 
 		utils.getData(utils.baseUrl + 'index.php?act='+cate+'&getIdx='+getIdx, 'GET', '', function (res) {
+
 			if (cate === 'hot'){
+				let goods = that.data.goodsData;
+				if(goods != ''){
+					for (let i = 0; i < res.data.length; i++) {
+						goods.push(res.data[i]);
+					}
+				}else{
+					goods = res.data;
+				}
 				that.setData({
-					goodsData: res.data
+					goodsData: goods
 				})
 			} else if (cate === 'girl'){
+				let girl = that.data.girlData;
+				if (girl != '') {
+					for (let i = 0; i < res.data.length; i++) {
+						girl.push(res.data[i]);
+					}
+				} else {
+					girl = res.data;
+				}
 				that.setData({
-					girlData: res.data
+					girlData: girl
 				})
-			}else{
+			} else {
+				let boy = that.data.boyData;
+				if (boy != '') {
+					for (let i = 0; i < res.data.length; i++) {
+						boy.push(res.data[i]);
+					}
+				} else {
+					boy = res.data;
+				}
 				that.setData({
-					boyData: res.data
+					boyData: boy
 				})
 			}
 
@@ -190,5 +225,21 @@ Page({
 				canIUse: true
 			})
 		}
+	},
+	search: function(e){
+		this.setData({
+			searchStatus: false
+		})
+	},
+	hiddenSearch:function(){
+		// this.setData({
+		// 	searchStatus: true
+		// })
+	},
+	subData: function(e){
+		const cont = e.detail.value.sear_cont;
+		wx.navigateTo({
+			url: '../search/search?k='+cont,
+		})
 	}
 })

@@ -12,9 +12,17 @@ Page({
 		const that = this;
 		idx ? idx : idx = 1;
 
-		utils.getData(utils.baseUrl + 'grab.php?idx='+idx, 'get', '', function (res) {
+		utils.getData(utils.baseUrl + 'grab.php?idx=' + idx, 'get', '', function (res) {
+			let goods = that.data.goodsData;
+			if (goods != '') {
+				for (let i = 0; i < res.length; i++) {
+					goods.push(res[i]);
+				}
+			} else {
+				goods = res;
+			}
 			that.setData({
-				goodsData: res
+				goodsData: goods
 			})
 		})
 	},
