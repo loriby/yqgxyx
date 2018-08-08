@@ -18,13 +18,13 @@ Page({
 	getGoods: function (idx) {
 		const that = this;
 		const cont = that.data.c;
-		idx ? idx : idx = 1;
+		idx ? idx : idx = 0;
 
 		utils.getData(utils.baseUrl + 'search.php?cont=' + cont+'&idx='+idx, 'get', '', function (res) {
 			let goods = that.data.goodsData;
 
 			if (goods != '') {
-				for (let i = 0; i < res.length; i++) {
+				for (let i = 0; i < res.data.length; i++) {
 					goods.push(res.data[i]);
 				}
 			} else {
