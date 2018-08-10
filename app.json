@@ -1,10 +1,13 @@
 {
   "pages":[
 		"pages/index/index",
-		"pages/search/search",
-    "pages/suppliers/suppliers",
-		"pages/grab/grab",
 		"pages/goods/goods",
+		"pages/search/index/index",
+		"pages/search/search",
+		"pages/cat_all/cat_all",
+		"pages/grab/grab",
+		"pages/cate_list/cate_list",
+    "pages/suppliers/suppliers",
 		"pages/goods/goods_img/goods_img",
 		"pages/goods/goods_comment/goods_comment",
     "pages/user/user",
@@ -19,7 +22,6 @@
 		"pages/relate/relate",
 		"pages/add_zxcomment/add_zxcomment",
 		"pages/goods_zxcomment/goods_zxcomment",
-		"pages/cat_all/cat_all",
 		"pages/video/video",
 		"pages/coupon/coupon",
 		"pages/temai/temai",
@@ -38,12 +40,18 @@
     "borderStyle": "#b6b6b6",
     "backgroundColor": "#f7f6fb",
     "list": [
-      {
-        "pagePath": "pages/index/index",
-        "iconPath": "images/index_g.png",
-        "selectedIconPath": "images/index.png",
-        "text": "首页"
-      },
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "images/index_g.png",
+				"selectedIconPath": "images/index.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/cat_all/cat_all",
+				"iconPath": "images/cate.png",
+				"selectedIconPath": "images/cate_r.png",
+				"text": "分类"
+			},
 			{
 				"pagePath": "pages/grab/grab",
 				"iconPath": "images/cart_g.png",

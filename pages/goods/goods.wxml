@@ -2,7 +2,7 @@
   <!-- 商品图轮播 -->
   <swiper indicator-dots='true' autoplay='true' interval='2000' circular="true" class="swip" indicator-active-color="#f23030">
     <swiper-item wx:for="{{banners}}">
-      <image src='{{item}}'></image>
+      <image src='{{item}}_640x640.jpg'></image>
     </swiper-item>
   </swiper>
   <!-- 商品图轮播 END -->
@@ -189,7 +189,7 @@
     <view class='gd_sales' wx-if="{{thirdClass == 'checked'}}">3</view>
   </view> -->
   <!-- 商品介绍 -->
-
+	<view class='login_wrap' hidden='true'><button class='login_btn' open-type="getUserInfo" bindgetuserinfo="getPermissios">点我登录</button></view>
   <view class='goods_buy'>
     <view class='gb_cart'>
       <navigator url='../index/index' open-type="switchTab">
@@ -203,8 +203,8 @@
 				<text>超级购</text>
 			</navigator>
     </view>
-    <view class='gb_add' bindtap='copy'>
-      立即购买
+    <view class='gb_add'>
+      <button class='gb_add' open-type="getUserInfo" bindgetuserinfo="getPermissios">立即购买</button>
     </view>
   </view>
 

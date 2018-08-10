@@ -2,7 +2,8 @@ const utils = require('../../utils/util.js');
 Page({
 	data:{
 		goodsData: '',
-		idx: 1
+		idx: 1,
+		topImg: true
 	},
 	onLoad: function(){
 		const that = this;
@@ -34,5 +35,19 @@ Page({
 			idx: idx
 		})
 		this.getGoods(idx);
+	},
+	onPageScroll: function(e){
+		if (e.scrollTop > 500) {
+			this.setData({
+				topImg: false
+			})
+		} else {
+			this.setData({
+				topImg: true
+			})
+		}
+	},
+	goTop: function () {
+		utils.goTop();
 	}
 })

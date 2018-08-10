@@ -35,6 +35,7 @@ page{
 }
 .cat_wrap{
 	display: flex;
+	overflow-y: scroll;
 }
 .cat_list{
 	width: 156rpx;
@@ -98,4 +99,7 @@ page{
 	border-right: 2rpx solid #ddd;
 	border-bottom: 2rpx solid #ddd;
 	box-sizing: border-box;
+}
+.cat_left_wrap{
+	overflow-y: scroll;
 }

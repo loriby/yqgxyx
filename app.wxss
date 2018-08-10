@@ -10,3 +10,10 @@ navigator{
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: transparent;
 }
+.gotop{
+	width: 100rpx;
+	height: 100rpx;
+	position: fixed;
+	bottom: 160rpx;
+	right: 20rpx;
+}

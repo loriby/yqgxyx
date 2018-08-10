@@ -1,0 +1,99 @@
+.box{
+	width: 100%;
+	display: flex;
+	background: #fff;
+	border-bottom: 2rpx solid #ececec;
+}
+.search_box{
+	flex: 1;
+	margin: 0 20rpx;
+	height: 66rpx;
+	padding-top: 14rpx;
+	position: relative
+}
+.search_box input{
+	height: 52rpx;
+	background: #e9e8ee;
+	border-radius: 30rpx;
+	padding-left: 85rpx;
+	font-size: 24rpx;
+	color: #333;
+}
+.search_box image{
+	position: absolute;
+	width: 27rpx;
+	height: 27rpx;
+	top: 27rpx;
+	left: 40rpx;
+	z-index: 1;
+}
+.search_options{
+	display: flex;
+	height: 72rpx;
+	line-height: 72rpx;
+	background: #fff;
+	border-bottom: 2rpx solid #ececec;
+}
+.s_btn{
+	width: 124rpx;
+	height: 52rpx;
+	border-radius: 6rpx;
+	background: #e93b3d;
+	font-size: 28rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 52rpx;
+	margin: 14rpx 20rpx 0 0;
+	padding: 0;
+}
+.promp_wrap{
+	padding-left: 20rpx;
+	background: #fff;
+}
+.pw_list{
+	width: 100%;
+	height: 76rpx;
+	color: #333333;
+	font-size: 24rpx;
+	line-height: 76rpx;
+	border-bottom: 2rpx solid #ececec;
+}
+.search_hot{
+	font-size: 24rpx;
+	color: #2f2f2f;
+	text-indent: 20rpx;
+	margin-top: 28rpx;
+}
+.sh_wrap{
+	padding: 28rpx 20rpx 0;
+}
+.shw_list{
+	float: left;
+	padding: 10rpx 18rpx;
+	font-size: 24rpx;
+	background: #e9e8ee;
+	color: #2e2e30;
+	border-radius: 8rpx;
+	margin-right: 14rpx;
+	margin-bottom: 20rpx;
+}
+.search_hot text{
+	float: right;
+	font-size: 24rpx;
+	color: #e94f4f;
+	margin-right: 20rpx;
+}
+.search_his{
+	margin-top: 60rpx;
+}
+.btn_qx{
+	background: #f8f8f8;
+	border: 2rpx solid #dddddd;
+	color: #343434;
+}
+.prompt{
+	font-size: 24rpx;
+	color: #999;
+	text-align: center;
+	margin-top: 40rpx;
+}

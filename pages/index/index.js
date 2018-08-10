@@ -18,7 +18,8 @@ Page({
 		canIUse: true,
 		banImg: '',
 		searchStatus: true,
-		navClass: ''
+		navClass: '',
+		topImg: true
   },
   tab: function (e) {
     var thisName=e.currentTarget.dataset.name;
@@ -84,6 +85,16 @@ Page({
 		} else {
 			this.setData({
 				navClass: ''
+			})
+		}
+
+		if (e.scrollTop > 500) {
+			this.setData({
+				topImg: false
+			})
+		}else{
+			this.setData({
+				topImg: true
 			})
 		}
 	},
@@ -175,6 +186,7 @@ Page({
 						}
 						//获取登录信息
 						utils.getData(utils.baseUrl + 'login.php?act=login', 'GET', postData, function (res) {
+							console.log(res)
 							const openid = res.data.openid;
 							const is_have = res[0];
 							const session_key = res.data.session_key;
@@ -241,5 +253,8 @@ Page({
 		wx.navigateTo({
 			url: '../search/search?k='+cont,
 		})
+	},
+	goTop: function(){
+		utils.goTop();
 	}
 })

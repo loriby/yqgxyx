@@ -33,6 +33,13 @@ const getData = (url,type,data,cb) =>{
 	})
 }
 
+const goTop = () =>{
+	wx.pageScrollTo({
+		scrollTop: 0,
+		duration: 300
+	})
+}
+
 const copy = (data,cb) => {
 	wx.setClipboardData({
 		data: data,
@@ -50,5 +57,6 @@ module.exports = {
   formatTime: formatTime,
 	getData: getData,
 	baseUrl: baseUrl,
-	copy: copy
+	copy: copy,
+	goTop: goTop
 }

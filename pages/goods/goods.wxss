@@ -526,3 +526,23 @@ swiper{
 .ranking text.red{
 	color: #F40;
 }
+.login_btn{
+	width: 80%;
+	height: 80rpx;
+	display: block;
+	background: #f2434a;
+	color: #fff;
+	font-size: 14px;
+	margin-top: 40rpx;
+}
+.login_wrap{
+	width: 90%;
+	height: 160rpx;
+	position: fixed;
+	top: 50%;
+	left: 5%;
+	margin-top: -40rpx;
+	z-index: 9;
+	background: #fff;
+	border: 2px solid #f0f0f0;
+}
