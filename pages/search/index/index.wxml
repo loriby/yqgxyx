@@ -16,13 +16,6 @@
 		
 	 </view>
   <view style='display:{{display}}' >
-    <!-- <view class='search_hot'>热门搜索</view>
-    <view class='sh_wrap'>
-      <block wx:for='{{hot_search}}' wx:key='hot'>
-        <view class='shw_list' data-keyword='{{item.name}}'  bindtap='do_search'>{{item.name}}</view>
-      </block>
-      <text class='clear'></text>
-    </view> -->
     <view class='search_hot search_his'>历史搜索 </view>
     <view class='sh_wrap'>
     <block wx:for='{{historyList}}' wx:key='history'>
