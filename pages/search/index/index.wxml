@@ -1,0 +1,28 @@
+<!--pages/seach/index.wxml-->
+<view class='container'>
+	<form bindsubmit='subData'>
+		<view class='box'>
+			<view class='search_box'>
+				<input focus='true' placeholder='请输入商品名称' name="sear_cont" value='{{search_values}}'></input>
+				<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/search.png'></image>
+			</view>
+			<button class='s_btn' form-type="submit">搜索</button>
+		</view>
+	</form>
+	<view class='promp_wrap' wx:if="{{keyword_list}}">
+    <block wx:for='{{keyword_list}}' wx:key='keyword'>
+        <view class='pw_list' data-keyword='{{item.name}}' bindtap='do_search'>{{item.name}}</view>
+    </block>
+		
+	 </view>
+  <view style='display:{{display}}' >
+    <view class='search_hot search_his'>历史搜索 </view>
+    <view class='sh_wrap'>
+    <block wx:for='{{historyList}}' wx:key='history'>
+        <view class='shw_list' data-keyword='{{item.cont}}' bindlongtap='delHis'  bindtap='do_search'>{{item.cont}}</view>
+      </block>
+      <text class='clear'></text>
+    </view>
+  </view>
+	<view class='prompt'>想要删除单个搜索历史？长按就可以了哦</view>
+</view>

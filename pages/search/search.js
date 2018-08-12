@@ -8,7 +8,7 @@ Page({
 	},
 	onLoad: function(e){
 		let cont = this.trim(e.k);
-		console.log(cont)
+		
 		this.setData({
 			c: e.k
 		})
@@ -18,9 +18,11 @@ Page({
 	getGoods: function (idx) {
 		const that = this;
 		const cont = that.data.c;
-		idx ? idx : idx = 0;
+		const uid = wx.getStorageSync('id');
 
-		utils.getData(utils.baseUrl + 'search.php?cont=' + cont+'&idx='+idx, 'get', '', function (res) {
+		idx ? idx : idx = 1;
+
+		utils.getData(utils.baseUrl + 'search.php?act=search&uid='+uid+'&cont=' + cont+'&idx='+idx, 'get', '', function (res) {
 			let goods = that.data.goodsData;
 
 			if (goods != '') {

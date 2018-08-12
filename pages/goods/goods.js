@@ -43,7 +43,9 @@ Page({
     coupArrow:'images/right-j.png',
     coupArrCla:'',
 		goods: '',
-		banners:''
+		canIUse: true,
+		banners:'',
+    detailImgs: ''
   },
   tab:function(e){
     var name=e.currentTarget.dataset.name;
@@ -73,6 +75,7 @@ Page({
 				goods: res,
 				banners: res.img[0]
 			})
+      that.getDetail(res.goodsId);
 		})
   },
   showCoupon:function(e){
@@ -100,13 +103,102 @@ Page({
   },
 	copy:function(e){
 		const goodsUrl = this.data.goods.tkl[0];
-		
-		utils.copy(goodsUrl, function(res){
-			wx.showToast({
-				title: '复制成功，打开手机淘宝即可查看并下单！',
-				icon: 'none',
-				duration: 2000
+
+		if (wx.getStorageSync('user_id') == '') {
+			this.setData({
+				canIUse: false
 			})
-		})
-	}
+		} else {
+			utils.copy(goodsUrl, function (res) {
+				wx.showToast({
+					title: '复制成功，打开手机淘宝即可查看并下单！',
+					icon: 'none',
+					duration: 2000
+				})
+			})
+		}
+	},
+	getPermissios: function (e) {
+		if (e.detail.rawData) {
+			this.wx_login();
+			this.setData({
+				canIUse: true
+			})
+		}
+	},
+	wx_login: function () {
+		try {
+			let val = wx.getStorageSync('user_id');
+			if (val) {
+				let session_id = val;
+			}
+		} catch (e) {
+			var session_id = ''
+		}
+
+		const that = this;
+
+		if (!session_id) {
+			//登录
+			wx.login({
+				success: function (res) {
+					if (res.code) {
+						const postData = {
+							code: res.code
+						}
+						//获取登录信息
+						utils.getData(utils.baseUrl + 'login.php?act=login', 'GET', postData, function (res) {
+							const openid = res.data.openid;
+							const is_have = res[0];
+							const session_key = res.data.session_key;
+
+							wx.getSetting({
+								success(r) {
+									wx.setStorageSync('user_id', session_key);
+
+									utils.copy(that.data.goods.tkl[0], function (res) {
+										wx.showToast({
+											title: '复制成功，打开手机淘宝即可查看并下单！',
+											icon: 'none',
+											duration: 2000
+										})
+									})
+
+
+									if (is_have === 0) {
+										if (r.authSetting['scope.userInfo']) {
+											wx.getUserInfo({
+												success: function (res) {
+													let data = res.userInfo;
+													data.openid = openid;
+
+													utils.getData(utils.baseUrl + 'login.php?act=msg', 'POST', data, function (res) {
+														wx.setStorageSync('id', res['id']);
+													})
+												}
+											})
+										}
+									} else {
+										wx.setStorageSync('id', res[1][0]['id']);
+									}
+								}
+							})
+						})
+					}
+				},
+				fail: function () {
+					console.log('服务器请求失败！');
+				}
+			})
+		}
+	},
+  getDetail: function(id){
+    const that = this;
+
+    utils.getData('https://hws.m.taobao.com/cache/mtop.wdetail.getItemDescx/4.1/?data={item_num_id:' + id +'}&type=json','get','',function(res){
+      that.setData({
+        detailImgs: res.data.images
+      })
+    })
+  }
 })

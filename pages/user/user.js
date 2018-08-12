@@ -16,10 +16,11 @@ Page({
 		}
 	},
 	getMsg: function(){  //获取个人信息
-		const openid = wx.getStorageSync('openid');
+		const openid = wx.getStorageSync('id');
 		const that = this;
 
 		utils.getData(utils.baseUrl + 'user.php?act=user&openid=' + openid,'GET','',function(res){
+
 			that.setData({
 				msg : res.data[0]
 			})
@@ -62,9 +63,6 @@ Page({
 							wx.getSetting({
 								success(r) {
 									wx.setStorageSync('user_id', session_key);
-									wx.setStorageSync('openid', openid);
-
-									that.getMsg();
 
 									if (is_have === 0) {
 										if (r.authSetting['scope.userInfo']) {
@@ -74,11 +72,15 @@ Page({
 													data.openid = openid;
 
 													utils.getData(utils.baseUrl + 'login.php?act=msg', 'POST', data, function (res) {
-														console.log(res)
+														wx.setStorageSync('id', res['id']);
+														that.getMsg();
 													})
 												}
 											})
 										}
+									} else {
+										wx.setStorageSync('id', res[1][0]['id']);
+										that.getMsg();
 									}
 								}
 							})

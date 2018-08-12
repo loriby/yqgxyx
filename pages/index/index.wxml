@@ -63,12 +63,12 @@
 
   </view>
   <!-- 导航 END -->
-	<view class='login_wrap' hidden='{{canIUse}}'><button class='login_btn' open-type="getUserInfo" bindgetuserinfo="getPermissios">点我登录</button></view>
+	<view class='login_wrap' hidden='true'><button class='login_btn' open-type="getUserInfo" bindgetuserinfo="getPermissios">点我登录</button></view>
   <!-- 商品 -->
   <view class="idx_btm" id="ib_top">
 
     <!-- 商品头部 -->
-    <view class="ib_top {{navClass}}">
+    <view class="ib_top">
       <view bindtap='tab' data-name="selected" class="{{firstClass}}">
         <text>全部商品</text>
       </view>
@@ -87,7 +87,7 @@
       <view class='ib_list' hidden='{{firstClass === "checked" ? false : true}}'>
 				<navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{goodsData}}" wx:key='temai' wx:for-index='index'>
 					<view class='ib_goods {{index%2 === 1 ? "fr" : ""}}'>
-						<image class='goods_img' src="{{item.pic_url}}"/>
+						<image class='goods_img' src="{{item.pic_url}}_310x310.jpg"/>
 						<view class='goods_msg'>
 							<view class='goods_name'>{{item.title}}</view>
 							<view class='goods_intro'>{{item.intro}}</view>
@@ -108,7 +108,7 @@
       <view class='ib_list' hidden='{{secondClass === "checked" ? false : true}}'>
 				<navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{girlData}}">
 					<view class='ib_goods {{index%2 === 1 ? "fr" : ""}}'>
-						<image class='goods_img' src="{{item.pic_url}}"/>
+						<image class='goods_img' src="{{item.pic_url}}_310x310.jpg"/>
 						<view class='goods_msg'>
 							<view class='goods_name'>{{item.title}}</view>
 							<view class='goods_intro'>{{item.intro}}</view>
@@ -129,7 +129,7 @@
       <view class='ib_list' hidden='{{thirdClass === "checked" ? false : true}}'>
 				<navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{boyData}}">
 					<view class='ib_goods {{index%2 === 1 ? "fr" : ""}}'>
-						<image class='goods_img' src="{{item.pic_url}}"/>
+						<image class='goods_img' src="{{item.pic_url}}_310x310.jpg"/>
 						<view class='goods_msg'>
 							<view class='goods_name'>{{item.title}}</view>
 							<view class='goods_intro'>{{item.intro}}</view>
@@ -151,5 +151,5 @@
 
   </view>
   <!-- 商品 END -->
-
+	<image class='gotop' bindtap='goTop' hidden='{{topImg}}' src='/images/zd_ico.png'></image>
 </view>

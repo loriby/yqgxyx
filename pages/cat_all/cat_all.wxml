@@ -1,79 +1,31 @@
 <view class="container">
 	<!-- header -->
 	<view class='search_wrap'>
-		<view class="idx_search" bindtap='search'>
-			<!-- <image class='idx_logo' src='images/idx_logo.png'></image> -->
-			<!-- <image class='idx_search_img' src="images/idx_search.png"/> -->
-			<text >搜索商品、品牌、店铺名</text>
-		</view>
+		<navigator url='../search/index/index'>
+			<view class="idx_search" bindtap='search'>
+				<!-- <image class='idx_logo' src='images/idx_logo.png'></image> -->
+				<!-- <image class='idx_search_img' src="images/idx_search.png"/> -->
+				<text >搜索商品、品牌、店铺名</text>
+			</view>
+		</navigator>
 	</view>
 	<!-- header END -->
 	<view class='cat_wrap' style='height:{{wH}}px'>
 		<!-- 左侧列表 -->
-		<view class='cat_list'>
-			<text bindtap='sel_list' data-idx='0' class='{{selArr[0]}}'>热搜推荐</text>
-			<text bindtap='sel_list' data-idx='1' class='{{selArr[1]}}'>饲料</text>
-			<text bindtap='sel_list' data-idx='2' class='{{selArr[2]}}'>兽药</text>
-			<text bindtap='sel_list' data-idx='3' class='{{selArr[3]}}'>添加剂</text>
-			<text bindtap='sel_list' data-idx='4' class='{{selArr[4]}}'>设备</text>
+		<view class='cat_left_wrap' style='height:{{wH}}px'>
+			<view class='cat_list'>
+				<text bindtap='sel_list' wx:for="{{cate_list}}" wx:for-index="listIdx" data-idx='{{listIdx}}' class='{{selArr[listIdx]}}'>{{item.Title}}</text>
+			</view>
 		</view>
 		<!-- 左侧列表 END -->
 		<!-- 右侧详细 -->
 		<view class='cat_detail'>
-			<text class='detail_tit'>品牌</text>
+			<!-- <text class='detail_tit'>品牌</text> -->
 			<view class='detail_goods'>
-				<navigator>
-					<view class='dg_list'>
-						<image src='http://www.zhue.cn/images/201702/thumb_img/1788_thumb_G_1487522893755.jpg'></image>
-						<text>太高营养</text>
-					</view>
-				</navigator>
-				<navigator>
-					<view class='dg_list'>
-						<image src='http://www.zhue.cn/images/201702/thumb_img/1788_thumb_G_1487522893755.jpg'></image>
-						<text>太高营养</text>
-					</view>
-				</navigator>
-				<navigator>
-					<view class='dg_list'>
-						<image src='http://www.zhue.cn/images/201702/thumb_img/1788_thumb_G_1487522893755.jpg'></image>
-						<text>太高营养</text>
-					</view>
-				</navigator>
-				<navigator>
-					<view class='dg_list'>
-						<image src='http://www.zhue.cn/images/201702/thumb_img/1788_thumb_G_1487522893755.jpg'></image>
-						<text>太高营养</text>
-					</view>
-				</navigator>
-				<navigator>
-					<view class='dg_list'>
-						<image src='http://www.zhue.cn/images/201702/thumb_img/1788_thumb_G_1487522893755.jpg'></image>
-						<text>太高营养</text>
-					</view>
-				</navigator>
-				<navigator>
-					<view class='dg_list'>
-						<image src='http://www.zhue.cn/images/201702/thumb_img/1788_thumb_G_1487522893755.jpg'></image>
-						<text>太高营养</text>
-					</view>
-				</navigator>
-				<view class='clear'></view>
-			</view>
-			<text class='detail_tit'>分类</text>
-			<view class='detail_tab'>
-				<navigator>
-					<text>教槽料</text>
-				</navigator>
-				<navigator>
-					<text>教槽料</text>
-				</navigator>
-				<navigator>
-					<text>教槽料</text>
-				</navigator>
-				<navigator>
-					<text>教槽料</text>
-				</navigator>
+				<view class='dg_list' wx:for="{{cate_list[selectIdx].data}}" bindtap='goList' data-cid="{{item.Id}}">
+					<image src='{{item.Pic}}'></image>
+					<text>{{item.Title}}</text>
+				</view>
 				<view class='clear'></view>
 			</view>
 		</view>
