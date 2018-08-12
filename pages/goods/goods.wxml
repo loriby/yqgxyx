@@ -9,8 +9,13 @@
 
   <!-- 商品信息 -->
   <view class='goods_msg'>
-    <view class='goods_name'><text>{{goods.title[1]}}</text>{{goods.title[0]}}</view>
-    <view class='goods_instru'>{{goods.disc}}</view>
+    <view class='goods_tit_box'>
+      <view class='goods_tit_wrap'>
+        <view class='goods_name'><text>{{goods.title[1]}}</text>{{goods.title[0]}}</view>
+        <view class='goods_instru'>{{goods.disc}}</view>
+      </view>
+      <button class='share_btn' open-type="share">转发</button>
+    </view>
     <view class='goods_price'>￥{{goods.pri}} <text>{{goods.bpri[1]}}：{{goods.bpri[0]}}元</text><view>已售：{{goods.volume}}</view></view>
     <view class='end_time'>
       <image class='goods_coupon_bg' mode='widthFix' src='https://www.xriml.com/applet/images/goods_quan.png'></image>

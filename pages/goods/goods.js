@@ -67,8 +67,15 @@ Page({
 		const postData = {
 			id: e.id
 		};
-		const that = this;
 
+    this.setData({
+      goodsId: e.id
+    })
+
+		const that = this;
+    wx.showShareMenu({
+      withShareTicket: true
+    })
     countDownT(this);
 		utils.getData(utils.baseUrl + 'goods.php', 'post', postData,function(res){
 			that.setData({
@@ -200,5 +207,14 @@ Page({
         detailImgs: res.data.images
       })
     })
+  },
+  onShareAppMessage: function(res){
+    if(res.from === 'button'){
+      return {
+        title: '宜券购',
+        desc: '一个专注于做领券优惠的网站',
+        path: '/page/goods/goods?id=' + this.goodsId
+      }
+    }
   }
 })
