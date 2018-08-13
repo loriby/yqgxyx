@@ -1,14 +1,22 @@
 /* pages/index/search/search.wxss */
 page{
 	background: #f4f4f4;
+	padding-top: 156rpx;
 }
 .search_box{
 	padding: 0 20rpx;
 	background: #fff;
 	height: 66rpx;
 	border-bottom: 2rpx solid #ececec;
+	display: block;
 	padding-top: 14rpx;
-	position: relative
+}
+.search_wrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	width: 100%;
 }
 .search_box input{
 	height: 52rpx;
@@ -32,11 +40,16 @@ page{
 	line-height: 72rpx;
 	background: #fff;
 	border-bottom: 2rpx solid #ececec;
+	position: fixed;
+	top: 82rpx;
+	left: 0;
+	width: 100%;
+	z-index: 9;
 }
 .so_list{
 	flex: 1;
 	text-align: center;
-	font-size: 24rpx;
+	font-size: 28rpx;
 	color: #333333;
 }
 .so_list image{

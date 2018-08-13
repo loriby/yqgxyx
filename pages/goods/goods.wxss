@@ -511,7 +511,9 @@ swiper{
 }
 .ranking{
 	display: flex;
-	margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 2rpx solid #f5f5f5;
 }
 .ranking view{
 	flex: 1;
@@ -545,4 +547,169 @@ swiper{
 	z-index: 9;
 	background: #fff;
 	border: 2px solid #f0f0f0;
+}
+.detail_img_wrap{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.detail_tit{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #333;
+  background: #fff;
+  display: block;
+}
+.detail_img_wrap image{
+  width: 100%;
+}
+.end_time{
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 20rpx;
+  position: relative;
+}
+.goods_coupon_bg{
+  width: 100%;
+}
+.coupon_wrap{
+  position: absolute;
+  top: 0;
+  left: 20rpx;
+  display: flex;
+  right: 20rpx;
+  height: 100%;
+}
+.coupon_left{
+  flex: 1;
+  color: #fff;
+  text-align: center;
+  padding-top: 6%;
+}
+.coupon_time{
+  margin-top: 16rpx;
+  text-align: center;
+}
+.coupon_receive{
+  width: 196rpx;
+}
+.coupon_receive button{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 28rpx;
+  padding: 0;
+  line-height: 160rpx;
+}
+button::after{
+  border: none;
+  padding: 0;
+}
+.coupon_line{
+  height: 100%;
+  width: 4rpx;
+}
+.shop_wrap{
+  margin-top: 20rpx;
+  background: #fff;
+}
+.shop_detail{
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+}
+.shop_logo{
+  width: 120rpx;
+  height: 120rpx;
+  margin: 20rpx 40rpx;
+}
+.shop_msg{
+  flex: 1;
+}
+.shop_name{
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 32rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.shop_type{
+  width: 166rpx;
+  height: 40rpx;
+  margin-top: 40rpx;
+}
+.tmall{
+  background: url(https://www.xriml.com/applet/images/tmall_ico.png) no-repeat;
+  background-size: 100% auto;
+  background-position: left center;
+}
+.taobao{
+  background: url(https://www.xriml.com/applet/images/tb_ico.png) no-repeat;
+  background-size: 86% auto;
+  background-position: left center;
+}
+.look_all{
+  display: block;
+  width: 200rpx;
+  font-size: 32rpx;
+  line-height: 160rpx;
+  height: 160rpx;
+  overflow: hidden;
+  padding-right: 36rpx;
+  background: url(https://www.xriml.com/applet/images/arrow_r.png) no-repeat;
+  background-size: 16rpx 30rpx;
+  background-position: right 20rpx center;
+  color: #888;
+}
+.goods_tit_wrap{
+  flex: 1;
+}
+.goods_name text{
+  font-size: 24rpx;
+  padding: 4rpx 8rpx;
+  background: #f2434a;
+  color: #fff;
+  border-radius: 6rpx;
+  margin-right: 6rpx;
+}
+.goods_tit_box{
+  display: flex;
+}
+.share_btn{
+  width: 100rpx;
+  height: 100rpx;
+  background: #f2434a;
+  color: #fff;
+  line-height: 100rpx;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  padding: 0;
+  margin-top: 32rpx;
+  margin-left: 20rpx;
+  border:4rpx solid pink;
+}
+.share_btn::after{
+  border: none;
+}
+.copy_loading{
+	width: 160rpx;
+	height: 160rpx;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -30rpx 0 0 -30rpx;
+	background: #999;
+	border-radius: 10rpx;
+}
+.copy_loading image{
+	width: 100%;
+	height: 100%;
 }

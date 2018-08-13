@@ -4,6 +4,7 @@ Page({
   data:{
 		msg: '',
 		canIUse: true,
+		loadingStatus: false
 	},
 	onLoad:function(){
 		
@@ -22,7 +23,8 @@ Page({
 		utils.getData(utils.baseUrl + 'user.php?act=user&openid=' + openid,'GET','',function(res){
 
 			that.setData({
-				msg : res.data[0]
+				msg : res.data[0],
+				loadingStatus: true
 			})
 		})
 	},

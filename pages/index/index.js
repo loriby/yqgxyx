@@ -19,7 +19,9 @@ Page({
 		banImg: '',
 		searchStatus: true,
 		navClass: '',
-		topImg: true
+		topImg: true,
+		historyList: '',
+		jump: true
   },
   tab: function (e) {
     var thisName=e.currentTarget.dataset.name;
@@ -65,6 +67,8 @@ Page({
 				canIUse: false
 			})
 		}
+
+		this.getHis();
 	},
 	onPageScroll: function (e) {
 		var that = this;
@@ -127,8 +131,16 @@ Page({
 			if (cate === 'hot'){
 				let goods = that.data.goodsData;
 				if(goods != ''){
-					for (let i = 0; i < res.data.length; i++) {
-						goods.push(res.data[i]);
+					if(res.data.length != 0){
+						for (let i = 0; i < res.data.length; i++) {
+							goods.push(res.data[i]);
+						}
+					}else{
+						wx.showToast({
+							title: '已经到底了哦！',
+							icon: 'none',
+							duration: 2000
+						})
 					}
 				}else{
 					goods = res.data;
@@ -244,9 +256,9 @@ Page({
 		})
 	},
 	hiddenSearch:function(){
-		// this.setData({
-		// 	searchStatus: true
-		// })
+		this.setData({
+			searchStatus: true
+		})
 	},
 	subData: function(e){
 		const cont = e.detail.value.sear_cont;
@@ -256,5 +268,53 @@ Page({
 	},
 	goTop: function(){
 		utils.goTop();
+	},
+	showSearch: function(){
+		this.setData({
+			searchStatus: false
+		})
+	},
+	getHis: function (e) {
+		const uid = wx.getStorageSync('id');
+		const that = this;
+
+		utils.getData(utils.baseUrl + 'search.php?act=history&uid=' + uid, 'get', '', function (res) {
+			that.setData({
+				historyList: res.data
+			})
+		})
+	},
+	do_search: function (e) {
+		const key = e.currentTarget.dataset.keyword;
+
+		if (this.data.jump) {
+			wx.navigateTo({
+				url: '/pages/search/search?k=' + key,
+			})
+		}
+	},
+	delHis: function (e) {
+		const uid = wx.getStorageSync('id');
+		const key = e.currentTarget.dataset.keyword;
+		const that = this;
+
+		that.setData({
+			jump: false
+		})
+
+		utils.getData(utils.baseUrl + 'search.php?act=edit&uid=' + uid + '&cont=' + key, 'get', '', function (res) {
+			if (res.code == 1) {
+				wx.showToast({
+					title: res.msg,
+					icon: 'success'
+				})
+				that.getHis();
+			} else {
+				wx.showToast({
+					title: res.msg,
+					icon: 'error'
+				})
+			}
+		})
 	}
 })

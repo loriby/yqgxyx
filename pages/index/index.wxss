@@ -622,3 +622,27 @@ swiper-item image{
 	background: #fff;
 	border: 2px solid #f0f0f0;
 }
+.search_his_wrap{
+	width: 100%;
+	max-height: 600rpx;
+	background: #fff;
+	position: fixed;
+	top: 95rpx;
+	padding-bottom: 40rpx;
+}
+.search_his_list{
+	font-size: 28rpx;
+	color: #fff;
+	padding: 6rpx 16rpx;
+	background: #999;
+	margin: 20rpx 0 0 20rpx;
+	display: inline-block;
+	float: left;
+	border-radius: 25rpx;
+}
+.prompt{
+	font-size: 24rpx;
+	color: #999;
+	text-align: center;
+	margin-top: 40rpx;
+}

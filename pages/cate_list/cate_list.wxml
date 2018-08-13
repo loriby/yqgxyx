@@ -1,21 +1,23 @@
 <!--pages/index/search/search.wxml-->
 <view class='container'>
 	<navigator url='../search/index/index'>
-		<view class='search_box'>
-			<input placeholder='请输入商品名称'></input>
-			<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/search.png'></image>
+		<view class='search_wrap'>
+			<view class='search_box'>
+				<input disabled="true" placeholder='请输入商品名称'></input>
+				<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/search.png'></image>
+			</view>
 		</view>
 	</navigator>
-	<view class='search_options' hidden='true'>
-		<view class='so_list checked'>综合</view>
-		<view class='so_list'>销量</view>
-		<view class='so_list'>
+	<view class='search_options'>
+		<view bindtap='accodingsort' data-navidx='0' class='so_list {{checkedArr[0]}}'>综合</view>
+		<view bindtap='accodingsort' data-navidx='1' class='so_list {{checkedArr[1]}}'>销量</view>
+		<view bindtap='accodingsort' data-navidx='2' class='so_list {{checkedArr[2]}}'>
 			<text>价格</text>
-			<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/price.png'></image>
+			<!-- <image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/price.png'></image> -->
 		</view>
-		<view class='so_list'>
-			<text>筛选</text>
-			<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/screening.png'></image>
+		<view bindtap='accodingsort' data-navidx='3' class='so_list {{checkedArr[3]}}'>
+			<text>最新上架</text>
+			<!-- <image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/screening.png'></image> -->
 		</view>
 	</view>
 	<view class='shop_goods'>
@@ -36,3 +38,4 @@
 		<text class='clear'></text>
 	</view>
 </view>
+<image class='gotop' bindtap='goTop' hidden='{{topImg}}' src='/images/zd_ico.png'></image>

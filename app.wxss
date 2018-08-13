@@ -17,3 +17,28 @@ navigator{
 	bottom: 160rpx;
 	right: 20rpx;
 }
+.mc{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: .5;
+}
+.loading{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+.loading image{
+	width: 600rpx;
+	height: 600rpx;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -300rpx 0 0 -300rpx;
+}

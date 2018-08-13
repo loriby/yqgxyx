@@ -2,18 +2,18 @@
 <view class='container'>
 	<navigator url='index/index'>
 		<view class='search_box'>
-			<input placeholder='请输入商品名称'></input>
+			<input disabled="true" placeholder='请输入商品名称'></input>
 			<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/search.png'></image>
 		</view>
 	</navigator>
-	<view class='search_options' hidden='true'>
-		<view class='so_list checked'>综合</view>
-		<view class='so_list'>销量</view>
-		<view class='so_list'>
+	<view class='search_options'>
+		<view class='so_list {{checkedArr[0]}}' data-navidx='0' bindtap='showVolume'>综合</view>
+		<view class='so_list {{checkedArr[1]}}' data-navidx='1' bindtap='showVolume'>销量</view>
+		<view class='so_list {{checkedArr[2]}}' data-navidx='2' bindtap='showVolume'>
 			<text>价格</text>
-			<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/price.png'></image>
+			<!-- <image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/price.png'></image> -->
 		</view>
-		<view class='so_list'>
+		<view class='so_list' hidden='true'>
 			<text>筛选</text>
 			<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/screening.png'></image>
 		</view>

@@ -9,7 +9,7 @@
 				<text>搜索商品</text>
 			</view>
 			<view class='idx_search {{!searchStatus ? "br0" : ""}}' hidden='{{searchStatus}}'>
-				<view><input bindblur='hiddenSearch' name="sear_cont" focus='{{!searchStatus}}' type='text'/></view>
+				<view><input bindfocus="showSearch" bindblur='hiddenSearch' name="sear_cont" focus='{{!searchStatus}}' type='text'/></view>
 			</view>
 			<button class='search_btn' hidden='{{searchStatus}}' form-type="submit">搜索</button>
 		</view>
@@ -152,4 +152,12 @@
   </view>
   <!-- 商品 END -->
 	<image class='gotop' bindtap='goTop' hidden='{{topImg}}' src='/images/zd_ico.png'></image>
+	<view class='mc' hidden='{{searchStatus}}'></view>
+	<view class='search_his_wrap' hidden='{{searchStatus}}'>
+		<block wx:for='{{historyList}}' wx:key='history'>
+        <view class='search_his_list' data-keyword='{{item.cont}}' bindlongtap='delHis'  bindtap='do_search'>{{item.cont}}</view>
+      </block>
+			<text class='clear'></text>
+			<view class='prompt'>想要删除单个搜索历史？长按就可以了哦</view>
+	</view>
 </view>

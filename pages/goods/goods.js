@@ -44,7 +44,10 @@ Page({
     coupArrCla:'',
 		goods: '',
 		canIUse: true,
-		banners:''
+		banners:'',
+    detailImgs: '',
+		loadingStatus: false,
+		copyLoadingImg: true
   },
   tab:function(e){
     var name=e.currentTarget.dataset.name;
@@ -66,14 +69,23 @@ Page({
 		const postData = {
 			id: e.id
 		};
-		const that = this;
 
+    this.setData({
+      goodsId: e.id
+    })
+
+		const that = this;
+    wx.showShareMenu({
+      withShareTicket: true
+    })
     countDownT(this);
 		utils.getData(utils.baseUrl + 'goods.php', 'post', postData,function(res){
 			that.setData({
 				goods: res,
-				banners: res.img[0]
+				banners: res.img[0],
+				loadingStatus: true
 			})
+      that.getDetail(res.goodsId);
 		})
   },
   showCoupon:function(e){
@@ -101,7 +113,7 @@ Page({
   },
 	copy:function(e){
 		const goodsUrl = this.data.goods.tkl[0];
-
+		
 		if (wx.getStorageSync('user_id') == '') {
 			this.setData({
 				canIUse: false
@@ -118,10 +130,11 @@ Page({
 	},
 	getPermissios: function (e) {
 		if (e.detail.rawData) {
-			this.wx_login();
 			this.setData({
-				canIUse: true
-			})
+				canIUse: true,
+				copyLoadingImg: false
+			});
+			this.wx_login(); 
 		}
 	},
 	wx_login: function () {
@@ -153,6 +166,10 @@ Page({
 							wx.getSetting({
 								success(r) {
 									wx.setStorageSync('user_id', session_key);
+
+									that.setData({
+										copyLoadingImg: true
+									})
 
 									utils.copy(that.data.goods.tkl[0], function (res) {
 										wx.showToast({
@@ -189,5 +206,24 @@ Page({
 				}
 			})
 		}
-	}
+	},
+  getDetail: function(id){
+    const that = this;
+
+    utils.getData('https://hws.m.taobao.com/cache/mtop.wdetail.getItemDescx/4.1/?data={item_num_id:' + id +'}&type=json','get','',function(res){
+      that.setData({
+        detailImgs: res.data.images
+      })
+    })
+  },
+  onShareAppMessage: function(res){
+		const that = this;
+		const title = that.data.goods.title[0];
+		const path = '/pages/goods/goods?id='+that.data.goodsId;
+
+		return {
+			title: title,
+			path: path
+		}
+  }
 })

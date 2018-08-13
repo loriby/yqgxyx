@@ -32,3 +32,6 @@
 		<!-- 右侧详细 END -->
 	</view>
 </view>
+<view class='loading' hidden='{{loadingStatus}}'>
+	<image src='https://www.xriml.com/applet/images/rolling.gif'></image>
+</view>

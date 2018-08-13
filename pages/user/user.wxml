@@ -11,7 +11,7 @@
         </view>
       </view>
       <view class='mtw_r'>
-        <view class='mwr_name'>{{msg.uname}} <text class="{{msg.sex === '1' ? 'sex_b' : 'sex_p'}}"></text></view>
+        <view class='mwr_name'>{{msg.uname}} <text class="{{msg.sex === '2' ? 'sex_p' : 'sex_b'}}"></text></view>
         <view class='mwr_id'>账号：{{msg.time}}</view>
       </view>
     </view>
@@ -20,13 +20,13 @@
   
   <!-- 列表 -->
   <view class='mine_btm'>
-    <navigator src=''>
+    <!-- <navigator src=''>
       <view class='mb_list'>
         <image class='mbl_icon' src="images/order.png"></image>
         <text class='mbl_txt'>我的订单</text>
         <image class='mbl_arrow' src='../cart/images/price_right1.png'></image>
       </view>
-    </navigator>
+    </navigator> -->
     <!-- <navigator src=''>
       <view class='mb_list'>
         <image class='mbl_icon' src="images/wait.png"></image>
@@ -53,3 +53,6 @@
 
 </view>
 	<view class='login_wrap' hidden='{{canIUse}}'><button class='login_btn' open-type="getUserInfo" bindgetuserinfo="getPermissios">点我登录</button></view>
+<view class='loading' hidden='{{loadingStatus}}'>
+	<image src='https://www.xriml.com/applet/images/rolling.gif'></image>
+</view>

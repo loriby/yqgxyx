@@ -16,8 +16,16 @@ Page({
 		utils.getData(utils.baseUrl + 'grab.php?idx=' + idx, 'get', '', function (res) {
 			let goods = that.data.goodsData;
 			if (goods != '') {
-				for (let i = 0; i < res.length; i++) {
-					goods.push(res[i]);
+				if (res.length != 0) {
+					for (let i = 0; i < res.length; i++) {
+						goods.push(res[i]);
+					}
+				} else {
+					wx.showToast({
+						title: '已经到底了哦！',
+						icon: 'none',
+						duration: 2000
+					})
 				}
 			} else {
 				goods = res;

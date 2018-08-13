@@ -4,7 +4,8 @@ Page({
 		selArr: ['list_checked','','','',''],
 		wH: wx.getSystemInfoSync().windowHeight-51,
 		cate_list: '',
-		selectIdx: 0
+		selectIdx: 0,
+		loadingStatus: false
   },
 	search:function(){
 		wx.navigateTo({
@@ -26,7 +27,8 @@ Page({
 
 		utils.getData('https://awgou.cn/awg/Api-Cat.json','get','',function(res){
 				that.setData({
-					cate_list: res
+					cate_list: res,
+					loadingStatus: true
 				})
 		})
 	},
