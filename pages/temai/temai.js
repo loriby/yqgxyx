@@ -1,66 +1,52 @@
-// pages/temai/temai.js
+const utils = require('../../utils/util.js');
+
 Page({
+	data:{
+		goods: '',
+		shop: '',
+		loadingStatus: false,
+		idx: 1,
+		shopid: ''
+	},
+	onLoad: function(e){
+		this.setData({
+			shopid: e.shopid
+		})
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+		this.getShopData(1);
+	},
+	getShopData: function(num){
+		const that = this;
+		const id = that.data.shopid;
+		
+		utils.getData('https://awgou.cn/awg/Api-Seller.json?PageNum=10&SellerId='+id+'&Page='+num, 'get', '', function(res){
+			if(res.code == 0){
+				if(num == 1){
+					that.setData({
+						loadingStatus: true,
+						goods: res.data,
+						shop: res.shop
+					})
+				}else{
+					that.setData({
+						goods: res.data
+					})
+				}
+			}else{
+				wx.showToast({
+					title: res.msg,
+					icon: 'error'
+				})
+			}
+		})
+	},
+	onReachBottom: function(){
+		let num = this.data.idx;
+		
+		num++;
+		that.setData({
+			idx: num
+		})
+		this.getShopData(num)
+	}
 })

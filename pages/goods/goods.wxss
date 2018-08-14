@@ -629,7 +629,7 @@ button::after{
   margin: 20rpx 40rpx;
 }
 .shop_msg{
-  flex: 1;
+	width: 314rpx;
 }
 .shop_name{
   font-size: 32rpx;
@@ -705,9 +705,10 @@ button::after{
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	margin: -30rpx 0 0 -30rpx;
+	margin: -80rpx 0 0 -80rpx;
 	background: #999;
 	border-radius: 10rpx;
+	opacity: .9;
 }
 .copy_loading image{
 	width: 100%;

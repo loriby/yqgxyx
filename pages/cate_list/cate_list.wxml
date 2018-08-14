@@ -38,4 +38,6 @@
 		<text class='clear'></text>
 	</view>
 </view>
-<image class='gotop' bindtap='goTop' hidden='{{topImg}}' src='/images/zd_ico.png'></image>
+	<view class='gotop' hidden='{{topImg}}'>
+		<image bindtap='goTop' src='/images/zd_ico.png'></image>
+	</view>

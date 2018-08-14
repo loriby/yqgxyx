@@ -1,4 +1,0 @@
-<view class="container">
-	<textarea class='zx_content' placeholder='请输入您要咨询的问题'></textarea>
-	<button class='zx_sub'>提交</button>
-</view>

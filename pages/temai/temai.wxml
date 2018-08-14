@@ -1,13 +1,22 @@
+<view class='shop_msg'>
+	<image class='shop_img' src='{{shop.Pic}}'></image>
+	<text class='shop_name'>{{shop.Title}}</text>
+	<view class='shop_ranking'>
+		<view>卖家服务：<text class="{{shop.FwH <= 1 ? 'ranking_r' : 'ranking_g'}}">{{shop.FwF}}</text></view>
+		<view>宝贝描述：<text class="{{shop.MsH <= 1 ? 'ranking_r' : 'ranking_g'}}">{{shop.MsF}}</text></view>
+		<view>物流服务：<text class="{{shop.WlH <= 1 ? 'ranking_r' : 'ranking_g'}}">{{shop.WlF}}</text></view>
+	</view>
+</view>
 <view class="container">
-	<navigator>
+	<navigator wx:for="{{goods}}" url='/pages/goods/goods?id={{item.Id}}'>
 		<view class='goods dbox'>
-			<image src='http://www.zhue.cn/images/201803/thumb_img/698_thumb_G_1521142031766.jpg' class='goods_img'></image>
+			<image src='{{item.Pic}}' class='goods_img'></image>
 			<view class='goods_msg dflex'>
-				<text class='goods_name'>打算打算打所大所多撒大所多撒</text>
+				<text class='goods_name'>{{item.Title}}</text>
 				<view class='goods_btm'>
 					<view class='goods_l'>
-						<view class='goods_pri'>￥9.90 <text>劲爆特价</text></view>
-						<text class='goods_opri'>￥13.8</text>
+						<view class='goods_pri'>￥{{item.Price/100}} <text>{{item.QuanPrice/100}}元券</text></view>
+						<text class='goods_opri'>销量：{{item.Sales}}</text>
 					</view>
 					<view class='goods_btn'>去抢购</view>
 					<text class='clear'></text>
@@ -15,20 +24,7 @@
 			</view>
 		</view>
 	</navigator>
-	<navigator>
-		<view class='goods dbox'>
-			<image src='http://www.zhue.cn/images/201803/thumb_img/698_thumb_G_1521142031766.jpg' class='goods_img'></image>
-			<view class='goods_msg dflex'>
-				<text class='goods_name'>打算打算打所大所多撒大所多撒</text>
-				<view class='goods_btm'>
-					<view class='goods_l'>
-						<view class='goods_pri'>￥9.90 <text>劲爆特价</text></view>
-						<text class='goods_opri'>￥13.8</text>
-					</view>
-					<view class='goods_btn'>去抢购</view>
-					<text class='clear'></text>
-				</view>
-			</view>
-		</view>
-	</navigator>
+</view>
+<view class='loading' hidden='{{loadingStatus}}'>
+	<image src='https://www.xriml.com/applet/images/rolling.gif'></image>
 </view>

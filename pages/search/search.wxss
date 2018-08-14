@@ -233,3 +233,13 @@ page{
 	color: #fff;
 	overflow: hidden;
 }
+.shop_prompt{
+	font-size: 28rpx;
+	color: #666;
+	text-align: center;
+	padding-top: 80rpx;
+}
+.shop_prompt navigator{
+	display: inline-block;
+	color: #4680d1;
+}

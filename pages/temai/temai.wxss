@@ -42,7 +42,6 @@ page{
 	display: block;
 	font-size: 24rpx;
 	color: #999;
-	text-decoration: line-through;
 	margin-top: 12rpx;
 }
 .goods_btn{
@@ -56,4 +55,46 @@ page{
 	font-size: 24rpx;
 	line-height: 60rpx;
 	margin-top: 14rpx;
+}
+.shop_msg{
+	width: 100%;
+	height: auto;
+	padding-top: 60rpx;
+	background: #fff;
+	margin-bottom: 20rpx;
+}
+.shop_img{
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50rpx;
+	display: block;
+	margin: 0 auto;
+	border: 4rpx solid pink;
+}
+.shop_name{
+	font-size: 28rpx;
+	color: #333;
+	margin-top: 20rpx;
+	display: block;
+	text-align: center;
+	border-bottom: 2rpx solid #f5f5f5;
+	padding-bottom: 20rpx;
+}
+.shop_ranking{
+	display: flex;
+	height: 80rpx;
+	line-height: 80rpx;
+}
+.shop_ranking view{
+	display: block;
+	text-align: center;
+	flex: 1;
+	color: #333;
+	font-size: 28rpx;
+}
+.ranking_r{
+	color: #F40;
+}
+.ranking_g{
+	color: #00BA97;
 }

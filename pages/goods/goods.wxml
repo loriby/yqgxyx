@@ -37,7 +37,7 @@
         <view class='shop_name'>{{goods.shopName}}</view>
         <view class="shop_type {{goods.title[1] === '天猫' ? 'tmall' : 'taobao'}}"></view>
       </view>
-      <navigator class='look_all' hidden='true'>店铺更多优惠</navigator>
+      <navigator url='/pages/temai/temai?shopid={{goods.shopId}}' class='look_all'>店铺更多优惠</navigator>
     </view>
     <view class='ranking'>
       <view>宝贝描述：<text class='{{goods.discribe > 4.6 ? "red" : "green"}}'>{{goods.discribe}}</text></view>

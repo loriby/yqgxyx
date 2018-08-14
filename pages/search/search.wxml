@@ -18,7 +18,7 @@
 			<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/screening.png'></image>
 		</view>
 	</view>
-	<view class='shop_goods'>
+	<view class='shop_goods' wx:if="{{goodsData != ''}}">
 		<navigator url='/pages/goods/goods?id={{item.id}}' wx:for="{{goodsData}}">
 			<view class='ib_goods {{index%2 === 1 ? "fr" : ""}}'>
 				<image class='goods_img' src="{{item.pic_url}}_310x310.jpg"/>
@@ -38,4 +38,5 @@
 		</navigator>
 		<text class='clear'></text>
 	</view>
+	<view class='shop_prompt' wx:else>没搜到相关商品哦！<navigator url='index/index'>换个关键词试试？</navigator></view>
 </view>

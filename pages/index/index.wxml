@@ -151,7 +151,9 @@
 
   </view>
   <!-- 商品 END -->
-	<image class='gotop' bindtap='goTop' hidden='{{topImg}}' src='/images/zd_ico.png'></image>
+	<view class='gotop' hidden='{{topImg}}'>
+		<image bindtap='goTop' src='/images/zd_ico.png'></image>
+	</view>
 	<view class='mc' hidden='{{searchStatus}}'></view>
 	<view class='search_his_wrap' hidden='{{searchStatus}}'>
 		<block wx:for='{{historyList}}' wx:key='history'>

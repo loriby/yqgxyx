@@ -69,6 +69,7 @@ Page({
 		}
 
 		this.getHis();
+		this.getSystem();
 	},
 	onPageScroll: function (e) {
 		var that = this;
@@ -313,6 +314,21 @@ Page({
 				wx.showToast({
 					title: res.msg,
 					icon: 'error'
+				})
+			}
+		})
+	},
+	getSystem: function(e){
+		wx.getSystemInfo({
+			success: function(res){
+				const postData = {
+					system: res.system,
+					model: res.model,
+					id: wx.getStorageSync('id'),
+				}
+
+				utils.getData(utils.baseUrl + 'index.php?act=system', 'get', postData,function(res){
+					
 				})
 			}
 		})
