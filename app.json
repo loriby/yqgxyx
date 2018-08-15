@@ -6,8 +6,8 @@
 		"pages/search/search",
 		"pages/cat_all/cat_all",
 		"pages/grab/grab",
+		"pages/user/user",
 		"pages/cate_list/cate_list",
-    "pages/user/user",
 		"pages/temai/temai"
   ],
   "window":{

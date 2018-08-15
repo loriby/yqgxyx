@@ -55,3 +55,18 @@ navigator{
 .dflex{
 	flex: 1;
 }
+.customer_service{
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50rpx;
+	color: #fff;
+	position: fixed;
+	top: 50%;
+	right: 20rpx;
+	font-size: 28rpx;
+	padding: 0;
+	line-height: 100rpx;
+	background: #fff url(https://www.xriml.com/applet/images/service.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+}

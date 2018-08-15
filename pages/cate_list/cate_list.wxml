@@ -27,11 +27,11 @@
 				<view class='goods_msg'>
 					<view class='goods_name'>{{item.ShortTitle}}</view>
 					<view class="goods_buy">
-						<view class='goods_buyl'>￥{{item.Price}}</view>
+						<view class='goods_buyl'>￥{{item.Price/100}}</view>
 						<view class='goods_comments'>销量：{{item.Sales}}</view>
 						<text class='clear'></text>
 					</view>
-					<view class='jiaobiao'>立减{{item.QuanPrice}}</view>
+					<view class='jiaobiao'>立减{{item.QuanPrice/100}}</view>
 				</view>
 			</view>
 		</navigator>

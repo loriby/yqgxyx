@@ -18,7 +18,6 @@ Page({
 		canIUse: true,
 		banImg: '',
 		searchStatus: true,
-		navClass: '',
 		topImg: true,
 		historyList: '',
 		jump: true
@@ -50,7 +49,6 @@ Page({
     }
 
 		this.setData({
-			navClass: posi,
       firstClass: arr['selected'][1],
       secondClass: arr['selected1'][1],
       thirdClass: arr['selected2'][1],
@@ -83,15 +81,15 @@ Page({
 
 		var wt = this.data.wT;
 
-		if (wt < 0) {
-			this.setData({
-				navClass: 'pfix'
-			})
-		} else {
-			this.setData({
-				navClass: ''
-			})
-		}
+		// if (wt < 0) {
+		// 	this.setData({
+		// 		navClass: 'pfix'
+		// 	})
+		// } else {
+		// 	this.setData({
+		// 		navClass: ''
+		// 	})
+		// }
 
 		if (e.scrollTop > 500) {
 			this.setData({

@@ -56,3 +56,4 @@
 <view class='loading' hidden='{{loadingStatus}}'>
 	<image src='https://www.xriml.com/applet/images/rolling.gif'></image>
 </view>
+<button class='customer_service' open-type='contact'></button>
