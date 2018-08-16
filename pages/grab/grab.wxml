@@ -12,7 +12,7 @@
 					<view class='goods_comments'>销量：{{item.volume}}</view>
 					<text class='clear'></text>
 				</view>
-				<view class='jiaobiao'>立减{{item.coupon}}</view>
+				<view class='jiaobiao' hidden='{{goodsData.jiaob}}'>立减{{item.coupon}}</view>
 			</view>
 		</view>
 	</navigator>

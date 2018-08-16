@@ -20,7 +20,8 @@ Page({
 		searchStatus: true,
 		topImg: true,
 		historyList: '',
-		jump: true
+		jump: true,
+		jiaobiaoStatus: true
   },
   tab: function (e) {
     var thisName=e.currentTarget.dataset.name;
@@ -237,7 +238,8 @@ Page({
 
 		utils.getData(utils.baseUrl+'index.php?act=banner','GET','',function(res){
 			that.setData({
-				banImg: res.data
+				banImg: res.data,
+				jiaobiaoStatus: res.jiaob
 			})
 		})
 	},

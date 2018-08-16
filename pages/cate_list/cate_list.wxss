@@ -41,7 +41,7 @@ page{
 	background: #fff;
 	border-bottom: 2rpx solid #ececec;
 	position: fixed;
-	top: 82rpx;
+	top: 80rpx;
 	left: 0;
 	width: 100%;
 	z-index: 9;

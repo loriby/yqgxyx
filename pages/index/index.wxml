@@ -98,7 +98,7 @@
 								<view class='goods_comments'>销量：{{item.volume}}</view>
 								<text class='clear'></text>
 							</view>
-							<view class='jiaobiao'>立减{{item.quan}}</view>
+							<view class='jiaobiao' hidden='{{jiaobiaoStatus}}'>立减{{item.quan}}</view>
 						</view>
 					</view>
 				</navigator>
@@ -119,7 +119,7 @@
 								<view class='goods_comments'>销量：{{item.volume}}</view>
 								<text class='clear'></text>
 							</view>
-							<view class='jiaobiao'>立减{{item.quan}}</view>
+							<view class='jiaobiao' hidden='{{jiaobiaoStatus}}'>立减{{item.quan}}</view>
 						</view>
 					</view>
 				</navigator>
@@ -140,7 +140,7 @@
 								<view class='goods_comments'>销量：{{item.volume}}</view>
 								<text class='clear'></text>
 							</view>
-							<view class='jiaobiao'>立减{{item.quan}}</view>
+							<view class='jiaobiao' hidden='{{jiaobiaoStatus}}'>立减{{item.quan}}</view>
 						</view>
 					</view>
 				</navigator>

@@ -42,6 +42,7 @@ Page({
 	},
 	onReachBottom: function(){
 		let num = this.data.idx;
+		const that = this;
 		
 		num++;
 		that.setData({
