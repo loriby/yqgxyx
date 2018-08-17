@@ -7,12 +7,14 @@ Page({
 		goodsData: '',
 		checkedArr: ['checked','','',''],
 		cate_id: 0,
-		topImg: true
+		topImg: true,
+		jiaob: true
 	},
 	onLoad: function(e){
 		
 		this.setData({
-			cid: e.id
+			cid: e.id,
+			jiaob: wx.getStorageSync('ishave')
 		})
 
 		this.getGoods(this.data.idx);

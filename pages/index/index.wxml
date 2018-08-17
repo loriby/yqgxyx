@@ -2,19 +2,19 @@
 <view class='container'>
 
   <!-- logo、搜索 --> 
-<form bindsubmit='subData'>
-  <view class='search_wrap'>
-		<view class='search_box'>
-			<view class="idx_search" bindtap='search' hidden='{{!searchStatus}}'>
-				<text>搜索商品</text>
+	<form bindsubmit='subData'>
+		<view class='search_wrap'>
+			<view class='search_box'>
+				<view class="idx_search" bindtap='search' hidden='{{!searchStatus}}'>
+					<text>搜索商品</text>
+				</view>
+				<view class='idx_search {{!searchStatus ? "br0" : ""}}' hidden='{{searchStatus}}'>
+					<view><input bindfocus="showSearch" bindblur='hiddenSearch' name="sear_cont" focus='{{!searchStatus}}' type='text'/></view>
+				</view>
+				<button class='search_btn' hidden='{{searchStatus}}' form-type="submit">搜索</button>
 			</view>
-			<view class='idx_search {{!searchStatus ? "br0" : ""}}' hidden='{{searchStatus}}'>
-				<view><input bindfocus="showSearch" bindblur='hiddenSearch' name="sear_cont" focus='{{!searchStatus}}' type='text'/></view>
-			</view>
-			<button class='search_btn' hidden='{{searchStatus}}' form-type="submit">搜索</button>
 		</view>
-	</view>
-</form>
+	</form>
   <!-- logo、搜索 END --> 
 	<swiper class='shuffing_wrap' autoplay="true" indicator-dots="true" indicator-active-color="#f0f" indicator-color="#fff" interval="2000" circular="true">
 		<swiper-item wx:for="{{banImg}}">

@@ -173,7 +173,7 @@ Page({
 
 									utils.copy(that.data.goods.tkl[0], function (res) {
 										wx.showToast({
-											title: '复制成功，打开手机淘宝即可查看并下单！',
+											title: that.data.goods.prompt,
 											icon: 'none',
 											duration: 2000
 										})

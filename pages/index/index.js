@@ -237,6 +237,7 @@ Page({
 		const that = this;
 
 		utils.getData(utils.baseUrl+'index.php?act=banner','GET','',function(res){
+			wx.setStorageSync('ishave', res.jiaob);
 			that.setData({
 				banImg: res.data,
 				jiaobiaoStatus: res.jiaob

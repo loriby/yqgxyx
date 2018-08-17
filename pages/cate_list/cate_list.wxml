@@ -31,7 +31,7 @@
 						<view class='goods_comments'>销量：{{item.Sales}}</view>
 						<text class='clear'></text>
 					</view>
-					<view class='jiaobiao'>立减{{item.QuanPrice/100}}</view>
+					<view class='jiaobiao' hidden='{{jiaob}}'>立减{{item.QuanPrice/100}}</view>
 				</view>
 			</view>
 		</navigator>
