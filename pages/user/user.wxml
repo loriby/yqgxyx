@@ -1,7 +1,7 @@
 <view class='container'>
 
   <!-- 个人信息 -->
-  <view class='mine_top'>
+  <view class='mine_top' hidden='{{status}}'>
     <view class='mt_wrap'>
       <view class='mtw_l'>
         <image class='mtw_prot' src='{{msg.pic}}'></image>
@@ -17,7 +17,9 @@
     </view>
   </view>
   <!-- 个人信息 END -->
-  
+  <view class='fake_wrap' hidden='{{!status}}'>
+    SHOW STH
+  </view>
   <!-- 列表 -->
   <view class='mine_btm'>
     <!-- <navigator src=''>

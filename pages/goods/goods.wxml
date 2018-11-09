@@ -11,13 +11,13 @@
   <view class='goods_msg'>
     <view class='goods_tit_box'>
       <view class='goods_tit_wrap'>
-        <view class='goods_name'><text hidden='{{goods.couponStatus}}'>{{goods.title[1]}}</text>{{goods.title[0]}}</view>
+        <view class='goods_name'><text hidden='{{isHave}}'>{{goods.title[1]}}</text>{{goods.title[0]}}</view>
         <view class='goods_instru'>{{goods.disc}}</view>
       </view>
       <button class='share_btn' open-type="share">转发</button>
     </view>
-    <view class='goods_price'>￥{{goods.pri}} <text hidden='{{goods.couponStatus}}'>原价：{{goods.bpri[0]}}元</text><view>已售：{{goods.volume}}</view></view>
-    <view class='end_time' hidden='{{goods.couponStatus}}'>
+    <view class='goods_price' hidden='{{isHave}}'>￥{{goods.pri}} <text hidden='{{isHave}}'>原价：{{goods.bpri[0]}}元</text><view>已售：{{goods.volume}}</view></view>
+    <view class='end_time' hidden='{{isHave}}'>
       <image class='goods_coupon_bg' mode='widthFix' src='https://www.xriml.com/applet/images/goods_quan.png'></image>
       <view class='coupon_wrap'>
         <view class='coupon_left'>
@@ -30,7 +30,7 @@
     </view>
   </view>
   <!-- 商品信息 END -->
-  <view class='shop_wrap' hidden='{{goods.couponStatus}}'>
+  <view class='shop_wrap' hidden='{{isHave}}'>
     <view class='shop_detail'>
       <image class='shop_logo' src='{{goods.shopLogo}}'></image>
       <view class='shop_msg'>
@@ -45,13 +45,13 @@
       <view>物流服务：<text class='{{goods.wservice > 4.6 ? "red" : "green"}}'>{{goods.wservice}}</text></view>
     </view>
   </view>
-  <view class='detail_img_wrap'>
+  <view class='detail_img_wrap' wx:if="{{detailImgs.length > 0}}">
     <text class='detail_tit'>宝贝详情</text>
     <image wx:for="{{detailImgs}}" src='{{item}}' mode="widthFix"></image>
   </view>
   <!-- 商品介绍 -->
 	<view class='login_wrap' hidden='true'><button class='login_btn' open-type="getUserInfo" bindgetuserinfo="getPermissios">点我登录</button></view>
-  <view class='goods_buy'>
+  <view class='goods_buy' hidden='{{isHave}}'>
     <view class='gb_cart'>
       <navigator url='../index/index' open-type="switchTab">
 				<image src='../index/images/idx_index.png'></image>
@@ -65,7 +65,7 @@
 			</navigator>
     </view>
     <view class='gb_add'>
-      <button class='gb_add' open-type="getUserInfo" bindgetuserinfo="getPermissios">立即购买</button>
+      <button class='gb_add' open-type="getUserInfo" bindgetuserinfo="getPermissios">{{goods.btn}}</button>
     </view>
   </view>
 	<view class='loading' hidden='{{loadingStatus}}'>

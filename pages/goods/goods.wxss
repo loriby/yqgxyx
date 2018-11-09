@@ -561,6 +561,7 @@ swiper{
   color: #333;
   background: #fff;
   display: block;
+  border-bottom: 2rpx solid #f1f1f1;
 }
 .detail_img_wrap image{
   width: 100%;

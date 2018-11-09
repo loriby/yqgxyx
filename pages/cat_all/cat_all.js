@@ -5,7 +5,8 @@ Page({
 		wH: wx.getSystemInfoSync().windowHeight-51,
 		cate_list: '',
 		selectIdx: 0,
-		loadingStatus: false
+		loadingStatus: false,
+    isHave: true
   },
 	search:function(){
 		wx.navigateTo({
@@ -31,6 +32,10 @@ Page({
 					loadingStatus: true
 				})
 		})
+
+    this.setData({
+      isHave: wx.getStorageSync('ishave')
+    })
 	},
 	goList: function(e){
 		var cid = e.currentTarget.dataset.cid;

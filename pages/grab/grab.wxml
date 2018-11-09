@@ -6,13 +6,13 @@
 				<view class='goods_name'>{{item.title}}</view>
 				<view class='goods_intro'>{{item.intro}}</view>
 				<!-- <view class='goods_price'>￥{{item.coupon_price}} <text>{{item.quan}}元优惠券</text></view> -->
-				<view class="goods_buy">
+				<view class="goods_buy" hidden='{{jiaobiaoStatus}}'>
 					<view class='goods_buyl'>￥{{item.pri}}</view>
 					<!-- <view class='goods_buyr'>立即购买</view> -->
 					<view class='goods_comments'>销量：{{item.volume}}</view>
 					<text class='clear'></text>
 				</view>
-				<view class='jiaobiao' hidden='{{goodsData.jiaob}}'>立减{{item.coupon}}</view>
+				<view class='jiaobiao' hidden='{{jiaobiaoStatus}}'>立减{{item.coupon}}</view>
 			</view>
 		</view>
 	</navigator>

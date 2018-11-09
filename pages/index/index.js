@@ -21,7 +21,9 @@ Page({
 		topImg: true,
 		historyList: '',
 		jump: true,
-		jiaobiaoStatus: true
+		jiaobiaoStatus: true,
+    bannerStatus: false,
+    verify: true
   },
   tab: function (e) {
     var thisName=e.currentTarget.dataset.name;
@@ -116,7 +118,8 @@ Page({
 		
 		getIdx++;
 		this.setData({
-			getIdx: getIdx
+			getIdx: getIdx,
+      goodsRollingStatus: false
 		})
 		this.getGoodsData(idx, getIdx);
 	},
@@ -130,6 +133,7 @@ Page({
 
 			if (cate === 'hot'){
 				let goods = that.data.goodsData;
+
 				if(goods != ''){
 					if(res.data.length != 0){
 						for (let i = 0; i < res.data.length; i++) {
@@ -146,7 +150,8 @@ Page({
 					goods = res.data;
 				}
 				that.setData({
-					goodsData: goods
+					goodsData: goods,
+          goodsRollingStatus: true
 				})
 			} else if (cate === 'girl'){
 				let girl = that.data.girlData;
@@ -158,7 +163,8 @@ Page({
 					girl = res.data;
 				}
 				that.setData({
-					girlData: girl
+          girlData: girl,
+          goodsRollingStatus: true
 				})
 			} else {
 				let boy = that.data.boyData;
@@ -170,7 +176,8 @@ Page({
 					boy = res.data;
 				}
 				that.setData({
-					boyData: boy
+          boyData: boy,
+          goodsRollingStatus: true
 				})
 			}
 
@@ -237,10 +244,11 @@ Page({
 		const that = this;
 
 		utils.getData(utils.baseUrl+'index.php?act=banner','GET','',function(res){
-			wx.setStorageSync('ishave', res.jiaob);
+      wx.setStorageSync('ishave', res.verify);
 			that.setData({
 				banImg: res.data,
-				jiaobiaoStatus: res.jiaob
+        jiaobiaoStatus: res.verify,
+        bannerStatus: true
 			})
 		})
 	},

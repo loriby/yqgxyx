@@ -1,6 +1,6 @@
 {
   "pages":[
-		"pages/index/index",
+    "pages/index/index",
 		"pages/goods/goods",
 		"pages/search/index/index",
 		"pages/search/search",
@@ -37,7 +37,7 @@
 				"pagePath": "pages/grab/grab",
 				"iconPath": "images/cart_g.png",
 				"selectedIconPath": "images/cart.png",
-				"text": "超级购"
+				"text": "TOP100"
 			},
       {
         "pagePath": "pages/user/user",

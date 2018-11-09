@@ -8,13 +8,12 @@ Page({
 		checkedArr: ['checked','','',''],
 		cate_id: 0,
 		topImg: true,
-		jiaob: true
+    jiaob: wx.getStorageInfoSync('isHave')
 	},
 	onLoad: function(e){
 		
 		this.setData({
-			cid: e.id,
-			jiaob: wx.getStorageSync('ishave')
+			cid: e.id
 		})
 
 		this.getGoods(this.data.idx);

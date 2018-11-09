@@ -139,3 +139,12 @@ page{
 	background: #fff;
 	border: 2px solid #f0f0f0;
 }
+.fake_wrap{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  text-align: center;
+  color: #333;
+  background: #fff;
+}

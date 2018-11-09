@@ -47,7 +47,8 @@ Page({
 		banners:'',
     detailImgs: '',
 		loadingStatus: false,
-		copyLoadingImg: true
+		copyLoadingImg: true,
+    isHave: wx.getStorageSync('ishave')
   },
   tab:function(e){
     var name=e.currentTarget.dataset.name;
@@ -67,7 +68,7 @@ Page({
   },
 	onLoad: function (e) {
 		const postData = {
-			id: e.id
+      id: e.id
 		};
 
     this.setData({
@@ -75,18 +76,31 @@ Page({
     })
 
 		const that = this;
+
     wx.showShareMenu({
       withShareTicket: true
     })
+
     countDownT(this);
+
 		utils.getData(utils.baseUrl + 'goods.php', 'post', postData,function(res){
+      const detailImgs = res.detailImgs[0];
+      const reg = /(?=\/\/img).*?jpg(?=\")/ig;
+      let arr = [];
+      let goodsDetailImgs = '';
+      if (detailImgs !== '' && detailImgs){
+        goodsDetailImgs = detailImgs.match(reg);
+      }
+
 			that.setData({
 				goods: res,
+        detailImgs: goodsDetailImgs,
 				banners: res.img[0],
 				loadingStatus: true
 			})
-      that.getDetail(res.goodsId);
 		})
+
+    // that.getDetail(16751089);
   },
   showCoupon:function(e){
     var coupCla=this.data.showCoup;
@@ -209,8 +223,8 @@ Page({
 	},
   getDetail: function(id){
     const that = this;
-
-    utils.getData('https://hws.m.taobao.com/cache/mtop.wdetail.getItemDescx/4.1/?data={item_num_id:' + id +'}&type=json','get','',function(res){
+    
+    utils.getData('https://h5api.m.taobao.com/h5/mtop.taobao.detail.getdesc/6.0/?data={id:"' + id +'"}','get','',function(res){
       that.setData({
         detailImgs: res.data.images
       })

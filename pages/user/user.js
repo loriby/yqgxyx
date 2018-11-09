@@ -4,7 +4,8 @@ Page({
   data:{
 		msg: '',
 		canIUse: true,
-		loadingStatus: false
+		loadingStatus: false,
+    status: wx.getStorageSync('isHave'),
 	},
 	onLoad:function(){
 		
@@ -22,6 +23,7 @@ Page({
 
 		utils.getData(utils.baseUrl + 'user.php?act=user&openid=' + openid,'GET','',function(res){
 
+      res.showMsg ? that.canIUse = res.showMsg : that.canIUse;
 			that.setData({
 				msg : res.data[0],
 				loadingStatus: true

@@ -3,7 +3,8 @@ Page({
 	data:{
 		goodsData: '',
 		idx: 1,
-		topImg: true
+    topImg: true,
+    jiaobiaoStatus: wx.getStorageSync('isHave')
 	},
 	onLoad: function(){
 		const that = this;
@@ -31,7 +32,7 @@ Page({
 				goods = res;
 			}
 			that.setData({
-				goodsData: goods
+				goodsData: goods,
 			})
 		})
 	},

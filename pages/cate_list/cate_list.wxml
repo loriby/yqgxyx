@@ -1,7 +1,7 @@
 <!--pages/index/search/search.wxml-->
 <view class='container'>
 	<navigator url='../search/index/index'>
-		<view class='search_wrap'>
+		<view class='search_wrap' hidden='{{jiaob}}'>
 			<view class='search_box'>
 				<input disabled="true" placeholder='请输入商品名称'></input>
 				<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/search.png'></image>
@@ -20,13 +20,13 @@
 			<!-- <image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/screening.png'></image> -->
 		</view>
 	</view>
-	<view class='shop_goods'>
+	<view class='shop_goods' wx:if="{{goodsData.length > 0}}">
 		<navigator url='/pages/goods/goods?id={{item.Id}}' wx:for="{{goodsData}}">
 			<view class='ib_goods {{index%2 === 1 ? "fr" : ""}}'>
 				<image class='goods_img' src="{{item.Pic}}_310x310.jpg"/>
 				<view class='goods_msg'>
 					<view class='goods_name'>{{item.ShortTitle}}</view>
-					<view class="goods_buy">
+					<view class="goods_buy" hidden='{{jiaob}}'>
 						<view class='goods_buyl'>￥{{item.Price/100}}</view>
 						<view class='goods_comments'>销量：{{item.Sales}}</view>
 						<text class='clear'></text>
@@ -37,6 +37,7 @@
 		</navigator>
 		<text class='clear'></text>
 	</view>
+  <view class='no_goods' wx:else>没有相关商品哦！ <navigator open-type="switchTab" url='/pages/index/index'>回首页？</navigator></view>
 </view>
 	<view class='gotop' hidden='{{topImg}}'>
 		<image bindtap='goTop' src='/images/zd_ico.png'></image>
