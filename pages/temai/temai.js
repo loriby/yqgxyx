@@ -20,18 +20,33 @@ Page({
 		const id = that.data.shopid;
 		
 		utils.getData('https://awgou.cn/awg/Api-Seller.json?PageNum=10&SellerId='+id+'&Page='+num, 'get', '', function(res){
-			if(res.code == 0){
-				if(num == 1){
-					that.setData({
-						loadingStatus: true,
-						goods: res.data,
-						shop: res.shop
-					})
-				}else{
-					that.setData({
-						goods: res.data
-					})
-				}
+      if (res.code == 0) {
+        let goods = that.data.goods;
+        let shop;
+
+        if (goods != '') {
+          if (res.data.length != 0) {
+            for (let i = 0; i < res.data.length; i++) {
+              goods.push(res.data[i]);
+            }
+          } else {
+            wx.showToast({
+              title: '已经到底了哦！',
+              icon: 'none',
+              duration: 2000
+            })
+          }
+        } else {
+          goods = res.data;
+        }
+
+        res.shop ? shop = res.shop : shop = that.data.shop;
+
+        that.setData({
+          loadingStatus: true,
+          goods: goods,
+          shop: shop
+        })
 			}else{
 				wx.showToast({
 					title: res.msg,
