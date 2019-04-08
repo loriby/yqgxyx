@@ -43,6 +43,7 @@ page{
 .cat_detail{
 	flex: 1;
 	background: #fff;
+	overflow-y: scroll;
 }
 .cat_list text{
 	display: block;

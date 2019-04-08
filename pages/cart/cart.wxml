@@ -1,0 +1,38 @@
+<view class="container">
+  <view class='cart_wrap'>
+    <checkbox-group bindchange="changePrice">
+      <view class='cart_list'>
+        <label>
+          <checkbox class='cart_ckx'/>
+          <image mode="aspectFit" class='cart_img' src='https://gd3.alicdn.com/imgextra/i2/2300430486/O1CN01hgOara1FScz1FjWnu\_!!2300430486.jpg_310x310.jpg'></image>
+          <view class='cart_msg'>
+            <view class='goods_tit'>按时到哈市尽快的哈时间段哈萨克都很看好的哈萨克的哈数据库好看</view>
+            <picker class='goods_type'>
+              <picker-view>123</picker-view>
+            </picker>
+            <view class='cart_operation'>
+              <text class='goods_pri'>37</text>
+              <view class='goods_num'>
+                <text>-</text>
+                <input type='number' value='1'/>
+                <text>+</text>
+              </view>
+            </view>
+          </view>
+          <text class='clear'></text>
+        </label>
+      </view>
+    </checkbox-group>
+  </view>
+  <view class='footer'>
+    <view class='fot_msg'>
+      <checkbox-group bindchange="selectAll">
+        <label>
+          <checkbox class='select_all' value='all'/>
+          <text class='select_all_txt'>全选</text>
+        </label>
+      </checkbox-group>
+    </view>
+    <text class='fot_buy'></text>
+  </view>
+</view>

@@ -19,7 +19,7 @@
 		</view>
 		<!-- 左侧列表 END -->
 		<!-- 右侧详细 -->
-		<view class='cat_detail'>
+		<view class='cat_detail' style='height:{{wH}}px'>
 			<!-- <text class='detail_tit'>品牌</text> -->
 			<view class='detail_goods'>
 				<view class='dg_list' wx:for="{{cate_list[selectIdx].data}}" bindtap='goList' data-cid="{{item.Id}}">

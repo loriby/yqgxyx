@@ -21,9 +21,9 @@ const getData = (url,type,data,cb) =>{
 		url: url,
 		type:type,
 		data: data,
-		header: {
-			'content-type': 'application/json'
-		},
+    header: {
+      'content-type': 'application/json'
+    },
 		success: function(res){
 			return typeof cb == "function" && cb(res.data);
 		},

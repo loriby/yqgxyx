@@ -1,4 +1,8 @@
 /**app.wxss**/
+page{
+  background: #f4f4f4;
+  border-bottom: 2rpx solid #f4f4f4;
+}
 image{
   display: block;
 }

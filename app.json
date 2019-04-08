@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/cart/cart",
     "pages/index/index",
 		"pages/goods/goods",
 		"pages/search/index/index",
@@ -8,7 +9,7 @@
 		"pages/grab/grab",
 		"pages/user/user",
 		"pages/cate_list/cate_list",
-		"pages/temai/temai"
+    "pages/temai/temai"
   ],
   "window":{
     "backgroundTextStyle":"light",
