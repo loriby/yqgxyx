@@ -1,0 +1,58 @@
+<view class="container">
+	<radio-group>
+		<view class='al_list'>
+			<view class='all_name'>
+				<view class='name'>语塞让</view>
+				<view class='phone'>13212454644</view>
+				<text class='clear'></text>
+			</view>
+			<view class='al_address'>的还是卡的哈速度解决卡都</view>
+			<view class='al_oper'>
+				<view class='alo_check'>
+					<radio color='#f2434a' id="radio2"/>
+					<label for="radio2" name="radio">设置默认</label>
+				</view>
+				<view class='alo_edit'>
+					<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/delete.png'></image>
+					<text>删除</text>
+					<text class='clear'></text>
+				</view>
+				<navigator url="/pages/user/act_edit_address/act_edit_address">
+					<view class='alo_edit'>
+						<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/edit.png'></image>
+						<text>编辑</text>
+						<text class='clear'></text>
+					</view>
+				</navigator>
+				<text class='clear'></text>
+			</view>
+		</view>
+		<view class='al_list'>
+			<view class='all_name'>
+				<view class='name'>语塞让</view>
+				<view class='phone'>13212454644</view>
+				<text class='clear'></text>
+			</view>
+			<view class='al_address'>的还是卡的哈速度解决卡都</view>
+			<view class='al_oper'>
+				<view class='alo_check'>
+					<radio id="radio1" color='#f2434a' name="radio"/>
+					<label for="radio1">设置默认</label>
+				</view>
+				<view class='alo_edit'>
+					<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/delete.png'></image>
+					<text>删除</text>
+				<text class='clear'></text>
+				</view>
+				<view class='alo_edit'>
+					<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/edit.png'></image>
+					<text>编辑</text>
+				<text class='clear'></text>
+				</view>
+				<text class='clear'></text>
+			</view>
+		</view>
+		<view class='al_add'>+新建地址</view>
+	
+	</radio-group>
+</view>

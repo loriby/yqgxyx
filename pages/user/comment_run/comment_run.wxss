@@ -1,0 +1,144 @@
+page{
+	background: #f0f0f0;
+}
+.goods_score{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	border-top: 1px solid #f0f0f0;
+	padding: 26rpx;
+	display: flex;
+}
+.gs_img{
+	width: 160rpx;
+	height: 160rpx;
+	border: 2rpx solid #cdcdcd;
+}
+.gs_img image{
+	width: 100%;
+	height: 100%;
+}
+.gs_level{
+	flex: 1;
+	height: 160rpx;
+	margin-left: 20rpx;
+}
+.eml_star{
+	margin-top: 26rpx;
+}
+.star_r{
+	width: 28rpx;
+	height: 28rpx;
+	background: url(http://www.zhue.cn/mobile/themes/zhue/images/applet/aft_star.png) no-repeat;
+	background-position: center top;
+	display: block;
+	background-size: 100% auto;
+	overflow: hidden;
+	float: left;
+	margin-right: 15rpx;
+}
+.star_g{
+	width: 28rpx;
+	height: 27rpx;
+	background: url(http://www.zhue.cn/mobile/themes/zhue/images/applet/aft_star.png) no-repeat;
+	background-position: center bottom;
+	display: block;
+	background-size: 100% auto;
+	overflow: hidden;
+	float: left;
+	margin-right: 15rpx;
+}
+.gsl_txt{
+	font-size: 32rpx;
+	color: #333333;
+	display: block;
+	margin-top: 30rpx;
+}
+.comm_cont{
+	padding: 20rpx;
+	background: #f9f9f9;
+	height: 200rpx;
+}
+.comm_cont textarea{
+	width: 100%;
+	height: 100%;
+	font-size: 28rpx;
+	color: #333;
+	line-height: 40rpx;
+}.cr_imgs{
+	width: 100%;
+	background: #fff;
+	padding-top: 40rpx;
+	padding-bottom: 1rpx;
+}
+.sele_img{
+	width: 116rpx;
+	height: 116rpx;
+	background: url(http://www.zhue.cn/mobile/themes/zhue/images/applet/images_7.jpg) no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: 40rpx;
+	margin-left: 20rpx;
+}
+.comm_wrap{
+	width: 100%;
+	margin-top: 20rpx;
+	background: #fff;
+}
+.cw_tit{
+	width: 100%;
+	height: 94rpx;
+	border-bottom: 2rpx solid #f9f9f9;
+	line-height: 94rpx;
+	display: flex;
+}
+.cwt_l{
+	width: 220rpx;
+	margin-left: 20rpx;
+}
+.cwt_l image{
+	width: 39rpx;
+	height: 35rpx;
+	float: left;
+	margin-top: 30rpx;
+}
+.cwt_l text{
+	float: left;
+	margin-left: 12rpx;
+	font-size: 28rpx;
+	color: #333333;
+}
+.cwt_r{
+	flex: 1;
+	font-size: 24rpx;
+	color: #999999;
+	text-align: right;
+	margin-right: 20rpx;
+}
+.cw_list{
+	width: 100%;
+	height: 94rpx;
+	border-bottom: 2rpx solid #f7f7f7;
+	line-height: 94rpx;
+	display: flex;
+}
+.cwl_txt{
+	color: #343434;
+	font-size: 26rpx;
+	margin-left: 20rpx;
+	flex: 1;
+}
+.cw_list .eml_star{
+	margin-top: 32rpx;
+}
+.cr_btn{
+	padding: 0 20rpx;
+	margin-top: 40rpx;
+}
+.cr_btn button{
+	width: 100%;
+	height: 88rpx;
+	font-size: 32rpx;
+	color: #fff;
+	text-align: center;
+	background: #f23030;
+}

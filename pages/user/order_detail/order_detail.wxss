@@ -1,0 +1,215 @@
+page{
+	background: #f0f0f0;
+}
+.od_state{
+	background: #fff;
+	border-top: 2rpx solid #f0f0f0;
+	padding: 20rpx;
+}
+.ods_list{
+	padding-top: 20rpx;
+	font-size: 28rpx;
+	color: #999999;
+	display: flex;
+}
+.ods_list view{
+	width: 140rpx;
+}
+.ods_list text{
+	flex: 1;
+}
+.ods_list .red{
+	color: #f12f2d;
+}
+.ods_list .black{
+	color: #323232;
+}
+.ods_wxzf{
+	width: 100%;
+	height: 88rpx;
+	background: #1aac19;
+	color:#fff;
+	font-size: 36rpx;
+	text-align: center;
+	line-height: 88rpx;
+	border-radius: 10rpx;
+	margin-top: 30rpx;
+}
+.ods_qrsh{
+	width: 100%;
+	height: 88rpx;
+	background: #f23030;
+	color:#fff;
+	font-size: 36rpx;
+	text-align: center;
+	line-height: 88rpx;
+	border-radius: 10rpx;
+	margin-top: 30rpx;
+}
+.ods_ddgz{
+	width: 100%;
+	height: 88rpx;
+	background: #f8f8f8;
+	color:#333;
+	font-size: 36rpx;
+	text-align: center;
+	line-height: 88rpx;
+	border-radius: 10rpx;
+	margin-top: 30rpx;
+	border: 2rpx solid #c6c6c6;
+}
+.od_msg{
+	padding: 20rpx;
+	font-size: 28rpx;
+	color: #999999;
+	background: #fff;
+	margin-top: 20rpx;
+}
+.om_instant{
+	margin-top: 20rpx;
+	width: 100%;
+	display: flex;
+}
+.omi_left{
+	flex: 1;
+	margin: 10rpx 20rpx 0 0;
+}
+.omi_right{
+	width: 16rpx;
+	height: 25rpx;
+	margin-top: 40rpx;
+}
+.omil_posi{
+	font-size: 28rpx;
+	height: 32rpx;
+	line-height: 32rpx;
+	overflow: hidden;
+	color: #333333;
+	width: 100%;
+}
+.omil_time{
+	font-size: 24rpx;
+	color: #9a9a9a;
+	margin-top: 20rpx;
+}
+.od_shop{
+	margin-top: 20rpx;
+	width: 100%;
+}
+.ods_name{
+	width: 100%;
+	height: 92rpx;
+	border-bottom: 2rpx solid #f3f3f3;
+	background: #fff;
+}
+.ods_name image{
+	float: left;
+	width: 28rpx;
+	height: 26rpx;
+	margin: 34rpx 0 0 20rpx;
+}
+.ods_name view{
+	float: left;
+	font-size: 28rpx;
+	color: #333333;
+	line-height: 92rpx;
+	margin-left: 15rpx;
+}
+.od_goods{
+	height: 220rpx;
+	border-bottom: 2rpx solid #f3f3f3;
+	background: #fff;
+	padding: 28rpx 0 0 28rpx;
+	display: flex;
+}
+.odg_img{
+	width: 160rpx;
+	height: 160rpx;
+	border: 2rpx solid #f3f3f3;
+}
+.odg_msg{
+	flex: 1;
+	margin: 0 20rpx 0 26rpx;
+}
+.goods_name{
+	font-size: 28rpx;
+	line-height: 40rpx;
+	height: 80rpx;
+	overflow: hidden;
+}
+.goods_speci{
+	color: #9a9a9a;
+	font-size: 24rpx;
+	margin-top: 10rpx;
+}
+.goods_price{
+	margin-top: 30rpx;
+}
+.goods_pri{
+	float: left;
+	font-size: 24rpx;
+	color: #333333;
+}
+.goods_count{
+	float: right;
+	font-size: 24rpx;
+	color: #999;
+}
+.od_tot{
+	padding-right: 20rpx;
+	height: 92rpx;
+	background: #fff;
+	text-align: right;
+	line-height: 92rpx;
+	font-size: 24rpx;
+	color: #333;
+}
+.od_tot text{
+	color: #f33131;
+}
+.od_payway{
+	width: 100%;
+	height: 92rpx;
+	line-height: 92rpx;
+	display: flex;
+	background: #fff;
+	margin-top: 20rpx;
+}
+.odp_txt{
+	color: #999999;
+	font-size: 28rpx;
+	width: 120rpx;
+	margin: 0 20rpx;
+}
+.odp_list{
+	flex: 1;
+	font-size: 28rpx;
+	color: #333333;
+	direction: rtl;
+	padding-right: 20rpx;
+}
+.od_cost{
+	padding: 10rpx 20rpx 28rpx;
+	margin-top: 20rpx;
+	background: #fff;
+	border-bottom: 2rpx solid #f6f6f6;
+}
+.odc_list{
+	margin-top: 20rpx;
+	font-size: 28rpx;
+}
+.odc_list text{
+	float: right;
+	color: #f23031;
+}
+.od_pay{
+	padding: 0 20rpx;
+	text-align: right;
+	height: 92rpx;
+	line-height: 92rpx;
+	background: #fff;
+	font-size: 32rpx;
+}
+.od_pay text{
+	color:#f12f2f;
+}
