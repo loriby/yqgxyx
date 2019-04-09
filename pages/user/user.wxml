@@ -22,34 +22,41 @@
   </view>
   <!-- 列表 -->
   <view class='mine_btm'>
-    <!-- <navigator src=''>
+    <navigator url='order_list/index'>
       <view class='mb_list'>
         <image class='mbl_icon' src="images/order.png"></image>
         <text class='mbl_txt'>我的订单</text>
         <image class='mbl_arrow' src='../cart/images/price_right1.png'></image>
       </view>
-    </navigator> -->
-    <!-- <navigator src=''>
+    </navigator>
+    <navigator url=''>
       <view class='mb_list'>
         <image class='mbl_icon' src="images/wait.png"></image>
         <text class='mbl_txt'>待付款</text>
         <image class='mbl_arrow' src='../cart/images/price_right1.png'></image>
       </view>
     </navigator>
-    <navigator src=''>
+    <navigator url=''>
       <view class='mb_list'>
         <image class='mbl_icon' src="images/goods.png"></image>
         <text class='mbl_txt'>待收货 <text class='mbg_count'>2单</text></text>
         <image class='mbl_arrow' src='../cart/images/price_right1.png'></image>
       </view>
     </navigator>
-    <navigator src=''>
+    <navigator url=''>
       <view class='mb_list'>
         <image class='mbl_icon' src="images/after.png"></image>
         <text class='mbl_txt'>售后订单</text>
         <image class='mbl_arrow' src='../cart/images/price_right1.png'></image>
       </view>
-    </navigator> -->
+    </navigator>
+    <navigator url='address_list/address_list'>
+      <view class='mb_list'>
+        <image class='mbl_icon' src="images/after.png"></image>
+        <text class='mbl_txt'>我的地址</text>
+        <image class='mbl_arrow' src='../cart/images/price_right1.png'></image>
+      </view>
+    </navigator>
   </view>
   <!-- 列表 END -->
 

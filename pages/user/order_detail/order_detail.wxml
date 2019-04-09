@@ -14,7 +14,9 @@
 		</view>
 		<view class='ods_wxzf'>微信支付</view>
 		<view class='ods_qrsh'>确认收货</view>
-		<view class='ods_ddgz'>订单追踪</view>
+		<navigator url='../order_tracking/order_tracking'>
+      <view class='ods_ddgz'>订单追踪</view>
+    </navigator>
 		<view class='ods_ddgz'>取消订单</view>
 	</view>
 	<view class='od_msg'>

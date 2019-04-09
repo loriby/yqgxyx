@@ -8,7 +8,13 @@
 		"pages/grab/grab",
 		"pages/user/user",
     "pages/newcart/cart",
-		"pages/cate_list/cate_list",
+    "pages/cate_list/cate_list",
+    "pages/user/address_list/address_list",
+    "pages/user/order_list/index",
+    "pages/user/act_edit_address/act_edit_address",
+    "pages/user/order_detail/order_detail",
+    "pages/user/order_tracking/order_tracking",
+    "pages/newcart/check_cart/check_cart",
     "pages/temai/temai"
   ],
   "window":{
@@ -35,7 +41,7 @@
 				"text": "分类"
 			},
 			{
-				"pagePath": "pages/grab/grab",
+				"pagePath": "pages/newcart/cart",
 				"iconPath": "images/cart_g.png",
 				"selectedIconPath": "images/cart.png",
 				"text": "TOP100"

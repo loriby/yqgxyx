@@ -68,7 +68,7 @@
       <label for='cam_radio' class="cam_select">全选</label>
       <view class='cam_tot'>合计(不含运费）:<text>￥138.00</text></view>
     </view>
-    <navigator class='ca_btn'>去结算(3)</navigator>
+    <navigator url='check_cart/check_cart' class='ca_btn'>去结算(3)</navigator>
   </view>
   <!-- 去结算 END -->
 

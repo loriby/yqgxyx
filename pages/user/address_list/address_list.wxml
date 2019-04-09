@@ -45,9 +45,11 @@
 				<text class='clear'></text>
 				</view>
 				<view class='alo_edit'>
-					<image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/edit.png'></image>
-					<text>编辑</text>
-				<text class='clear'></text>
+          <navigator url='act_edit_address/act_edit_address'>
+            <image src='http://www.zhue.cn/mobile/themes/zhue/images/applet/edit.png'></image>
+            <text>编辑</text>
+            <text class='clear'></text>
+          </navigator>
 				</view>
 				<text class='clear'></text>
 			</view>
